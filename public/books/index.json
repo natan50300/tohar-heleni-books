@@ -1,0 +1,14 @@
+[
+  {
+    "id": "laila-tov",
+    "order": 1,
+    "title": "לילה טוב, טוהר והלני",
+    "subtitle": "ספר רגוע לפני השינה",
+    "for": "both",
+    "palette": {
+      "from": "#2c3558",
+      "to": "#7d6a8c"
+    },
+    "hasArt": true
+  }
+]

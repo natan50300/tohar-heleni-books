@@ -1,0 +1,31 @@
+// Turns the raw illustrations in raw/<id>/ into the WebP files the site uses.
+// Raw files must be named cover.png, p01.png, p02.png ... (png/jpg/webp).
+// Usage: npm run process -- --book <id>
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import sharp from 'sharp';
+import { BOOKS_DIR, arg, readBook, pageNames } from './lib.mjs';
+
+const id = arg('book');
+if (!id) throw new Error('missing --book <id>');
+const book = readBook(id);
+const find = (name) => ['png', 'jpg', 'jpeg', 'webp'].map((e) => `raw/${id}/${name}.${e}`).find(existsSync);
+
+const missing = [];
+for (const name of pageNames(book)) {
+  const src = find(name);
+  if (!src) {
+    missing.push(name);
+    continue;
+  }
+  for (const [w, h] of [[1600, 1067], [800, 533]]) {
+    await sharp(src).resize(w, h, { fit: 'cover' }).webp({ quality: 82 }).toFile(`${BOOKS_DIR}/${id}/${name}-${w}.webp`);
+  }
+}
+
+const file = `${BOOKS_DIR}/${id}/book.json`;
+const json = JSON.parse(readFileSync(file, 'utf8'));
+json.hasArt = missing.length === 0;
+writeFileSync(file, JSON.stringify(json, null, 2) + '\n');
+console.log(missing.length ? `missing pages: ${missing.join(', ')}` : `${id}: all ${pageNames(book).length} pages ready`);
+execFileSync(process.execPath, ['scripts/build-index.mjs'], { stdio: 'inherit' });
