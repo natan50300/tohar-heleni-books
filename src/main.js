@@ -145,7 +145,7 @@ function showHelp() {
         <li>בוחרים ספר ומסובבים את הטלפון לרוחב.</li>
         <li>מדפדפים בהחלקה, כמו בספר עברי, או בלחיצה בצדי המסך.</li>
         <li>הכפתור ♪ מפעיל ומכבה את מנגינת הערש.</li>
-        <li>הספר זוכר באיזה עמוד עצרתם.</li>
+        <li>ב"טוהר בחווה" נוגעים בחיה כדי לשמוע את הקול שלה.</li>
       </ol>
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
@@ -190,9 +190,11 @@ async function openBook(id) {
       </div>
       <a class="close" href="#/" aria-label="חזרה לספרים">✕</a>
       <button class="music" aria-label="מנגינה">♪</button>
-      <span class="counter"></span>
-      <button class="nav prev" aria-label="העמוד הקודם">›</button>
-      <button class="nav next" aria-label="העמוד הבא">‹</button>
+      <div class="pager">
+        <button class="nav next" aria-label="העמוד הבא">‹</button>
+        <span class="counter"></span>
+        <button class="nav prev" aria-label="העמוד הקודם">›</button>
+      </div>
     </main>`;
 
   const root = app.querySelector('.reader');
@@ -203,8 +205,7 @@ async function openBook(id) {
   const prevBtn = root.querySelector('.prev');
   const nextBtn = root.querySelector('.next');
   const musicBtn = root.querySelector('.music');
-  const key = `page:${id}`;
-  let idx = Math.min(Number(store.get(key)) || 0, last - 1);
+  let idx = 0; // a book always opens at its cover
   let turning = false;
 
   // What fills the whole screen for page i.
@@ -226,7 +227,6 @@ async function openBook(id) {
   const settle = (i) => {
     stage.innerHTML = `<div class="sheet">${fill(i)}</div>`;
     idx = i;
-    store.set(key, i === last ? 0 : i);
     setChrome(i);
     root.classList.remove('turning');
     turning = false;
@@ -292,16 +292,10 @@ async function openBook(id) {
     .then((lock) => (wakeLock = lock))
     .catch(() => {});
 
-  // Where a touch lands on the picture itself (0..1), allowing for the way wide screens crop it.
+  // Where a touch lands on the picture itself (0..1).
   const onPicture = (clientX, clientY) => {
-    const w = innerWidth;
-    const h = innerHeight;
-    if (w / h > 1.5) {
-      const shown = w / 1.5;
-      return [clientX / w, (clientY + (shown - h) * 0.12) / shown];
-    }
-    const shown = h * 1.5;
-    return [(clientX + (shown - w) / 2) / shown, clientY / h];
+    const box = stage.getBoundingClientRect();
+    return [(clientX - box.left) / box.width, (clientY - box.top) / box.height];
   };
   // Animals answer when touched. Spots are {sound, x, y, r} in picture units; r is a share of the height.
   const touchAnimal = (clientX, clientY) => {

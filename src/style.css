@@ -221,10 +221,21 @@ a {
   -webkit-user-select: none;
 }
 
+.reader {
+  /* The whole picture is always shown (3:2). The text sits on its own page beside it, like an open book. */
+  --h: min(100dvh, calc((100vw - var(--sal) - var(--sar) - 200px) / 1.5));
+  --text-left: calc(var(--sal) + var(--h) * 1.5);
+  background: linear-gradient(160deg, #1b2038, #11142a);
+}
+
 .stage {
   position: absolute;
-  inset: 0;
+  left: var(--sal);
+  top: calc((100dvh - var(--h)) / 2);
+  width: calc(var(--h) * 1.5);
+  height: var(--h);
   perspective: 2400px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .sheet,
@@ -247,8 +258,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* wide phones crop the picture: keep the faces (top), give up the quiet strip (bottom) */
-  object-position: 50% 12%;
   -webkit-user-drag: none;
 }
 
@@ -372,14 +381,18 @@ a {
 
 .band {
   position: absolute;
-  inset: auto 0 0 0;
-  padding: 12vh calc(var(--sar) + 9vw) calc(var(--sab) + 3vh) calc(var(--sal) + 9vw);
-  background: linear-gradient(transparent, rgba(13, 16, 29, 0.55) 40%, rgba(13, 16, 29, 0.82));
+  top: 0;
+  bottom: 0;
+  left: var(--text-left);
+  right: 0;
+  padding: 56px calc(var(--sar) + 16px) 56px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-size: clamp(19px, 6vh, 40px);
-  line-height: 1.32;
+  font-size: clamp(17px, 5.4vh, 30px);
+  line-height: 1.45;
   color: var(--cream);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
   text-wrap: balance;
   transition: opacity 300ms ease;
   pointer-events: none;
@@ -394,7 +407,7 @@ a {
 }
 
 .is-cover .band {
-  font-size: clamp(26px, 10vh, 60px);
+  font-size: clamp(22px, 8vh, 44px);
 }
 
 .band small {
@@ -417,25 +430,29 @@ a {
   text-decoration: none;
 }
 
+.pager {
+  position: absolute;
+  left: var(--text-left);
+  right: var(--sar);
+  bottom: calc(var(--sab) + 8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  direction: ltr;
+  z-index: 3;
+}
+
 .nav {
-  top: 50%;
-  width: 48px;
-  height: 48px;
-  margin-top: -24px;
-  font-size: 24px;
+  position: static;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
   line-height: 1;
 }
 
-.nav.next {
-  left: calc(var(--sal) + 10px);
-}
-
-.nav.prev {
-  right: calc(var(--sar) + 10px);
-}
-
 .nav[disabled] {
-  opacity: 0;
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -461,18 +478,16 @@ a {
 }
 
 .counter {
-  position: absolute;
-  top: calc(var(--sat) + 14px);
-  left: calc(var(--sal) + 16px);
+  min-width: 52px;
+  text-align: center;
   font-size: 13px;
-  color: rgba(241, 230, 210, 0.45);
-  z-index: 3;
-  direction: ltr;
+  color: rgba(241, 230, 210, 0.5);
 }
 
 .end {
   position: absolute;
   inset: 0;
+  background: radial-gradient(90% 90% at 50% 20%, var(--night-2), #0d101d);
   display: grid;
   place-content: center;
   gap: 4vh;
