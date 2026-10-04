@@ -223,8 +223,9 @@ a {
 
 .reader {
   /* The whole picture is always shown (3:2), as large as the screen allows. */
-  --h: min(100dvh, calc(100vw / 1.5));
-  --w: calc(var(--h) * 1.5);
+  --ratio: 1.5;
+  --h: min(100dvh, calc(100vw / var(--ratio)));
+  --w: calc(var(--h) * var(--ratio));
   --side: calc((100vw - var(--w)) / 2);
 }
 

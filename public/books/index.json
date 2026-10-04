@@ -1,5 +1,17 @@
 [
   {
+    "id": "dugma",
+    "order": 0,
+    "title": "דוגמה: איורים רחבים",
+    "subtitle": "9 עמודים לבדיקה",
+    "for": "both",
+    "palette": {
+      "from": "#2c3558",
+      "to": "#7d6a8c"
+    },
+    "hasArt": true
+  },
+  {
     "id": "laila-tov",
     "order": 1,
     "title": "לילה טוב, טוהר והלני",

@@ -1,0 +1,62 @@
+{
+  "order": 0,
+  "title": "דוגמה: איורים רחבים",
+  "subtitle": "9 עמודים לבדיקה",
+  "for": "both",
+  "hasArt": true,
+  "palette": {
+    "from": "#2c3558",
+    "to": "#7d6a8c"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft cream romper with short puffy sleeves.",
+      "heleni": "a dusty-pink cotton dress with a small ruffle at the shoulders."
+    },
+    "night": {
+      "tohar": "sage-green footed pajamas with tiny pale-yellow stars.",
+      "heleni": "dusty-pink pajamas with tiny cream crescent moons."
+    }
+  },
+  "coverOutfit": "night",
+  "coverScene": "Tohar and Heleni in pajamas sitting close together on a wide window seat at night, seen from inside a cozy bedroom, looking up at a big round pale-yellow full moon in a deep dusty-blue sky with a few soft stars. Heleni's arm is around Tohar.",
+  "pages": [
+    {
+      "text": "השמש יורדת, שמיים של זהב,\nטוהר והלני משחקות עכשיו.",
+      "scene": "Early evening in a cozy children's room. Through a large window the sky is dusty pink and orange at sunset. Heleni stacks wooden blocks on a soft rug while Tohar sits beside her holding one block."
+    },
+    {
+      "text": "מי מציץ לו בחלון?\nירח קטן, עגול כמו בלון.",
+      "scene": "The sky in the window has turned soft violet. A small round pale-yellow moon peeks in at the corner of the window. Heleni points up at it in surprise; Tohar looks up with wide curious eyes."
+    },
+    {
+      "text": "הלני מנופפת: שלום, שלום!\nטוהר צוחקת: איזה יום!",
+      "scene": "Both girls stand at the low window sill, seen from the side. Heleni waves at the moon with one hand. Tohar holds the sill with both hands and laughs, mouth open in joy."
+    },
+    {
+      "text": "הירח לוחש: שששש... כבר מאוחר,\nבואו נגיד לילה טוב, עד מחר.",
+      "scene": "Close view of the moon glowing softly in a darkening dusty-blue sky, its gentle light falling into the room onto the two girls' upturned faces, seen from behind and slightly to the side."
+    },
+    {
+      "text": "לילה טוב, דובי רך,\nהשמיכה כבר מחכה לך.",
+      "scene": "Heleni tucks a small brown teddy bear under a tiny blanket in a doll bed. Tohar pats the teddy's head gently. The teddy looks sleepy."
+    },
+    {
+      "text": "לילה טוב, ארנב קטן,\nטוהר מחבקת, והוא כמעט ישן.",
+      "scene": "Tohar hugs a soft grey plush bunny with long floppy ears against her cheek, eyes half closed. Heleni kneels beside her, smiling and stroking the bunny's ear."
+    },
+    {
+      "text": "לילה טוב, כדור עגול,\nבסל שלך תנוח, זה הכל.",
+      "scene": "A soft striped ball rests in a wicker toy basket in the corner of the room. Heleni places it gently; Tohar crawls toward the basket, looking at the ball."
+    },
+    {
+      "text": "לילה טוב, ספרים יפים,\nעל המדף כולם נרדמים.",
+      "scene": "A low wooden bookshelf with a row of colorful picture books with blank spines. Heleni slides the last book into place on tiptoe. Tohar sits on the rug watching, one finger raised."
+    },
+    {
+      "text": "שוטפות ידיים וגם פנים,\nפְּלִיק וּפְלַק, המים נעימים.",
+      "scene": "A small cozy bathroom with warm light. Heleni stands on a wooden step stool at the sink with her hands under a gentle stream of water, a few round droplets in the air. Tohar sits on a fluffy bath mat beside the stool holding a small towel, giggling."
+    }
+  ],
+  "ratio": 2
+}

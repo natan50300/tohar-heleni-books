@@ -9,7 +9,10 @@ import { BOOKS_DIR, arg, readBook, pageNames } from './lib.mjs';
 const id = arg('book');
 if (!id) throw new Error('missing --book <id>');
 const book = readBook(id);
-const find = (name) => ['png', 'jpg', 'jpeg', 'webp'].map((e) => `raw/${id}/${name}.${e}`).find(existsSync);
+// Wide books (book.ratio, e.g. 2) keep their raw files in raw/<id>-wide/.
+const ratio = Number(book.ratio) || 1.5;
+const dir = book.ratio ? `raw/${id}-wide` : `raw/${id}`;
+const find = (name) => ['png', 'jpg', 'jpeg', 'webp'].map((e) => `${dir}/${name}.${e}`).find(existsSync);
 
 const missing = [];
 for (const name of pageNames(book)) {
@@ -18,7 +21,8 @@ for (const name of pageNames(book)) {
     missing.push(name);
     continue;
   }
-  for (const [w, h] of [[1600, 1067], [800, 533]]) {
+  for (const w of [1600, 800]) {
+    const h = Math.round(w / ratio);
     await sharp(src).resize(w, h, { fit: 'cover' }).webp({ quality: 82 }).toFile(`${BOOKS_DIR}/${id}/${name}-${w}.webp`);
   }
 }

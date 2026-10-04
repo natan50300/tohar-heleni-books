@@ -180,7 +180,7 @@ async function openBook(id) {
   const last = pages.length; // index of the "the end" screen
 
   app.innerHTML = `
-    <main class="reader" style="${paletteStyle(book.palette)}">
+    <main class="reader" style="${paletteStyle(book.palette)};--ratio:${Number(book.ratio) || 1.5}">
       <div class="backdrop"></div>
       <div class="stage"></div>
       <div class="band"></div>
@@ -307,7 +307,8 @@ async function openBook(id) {
     const spots = pages[idx]?.spots;
     if (!spots) return false;
     const [x, y] = onPicture(clientX, clientY);
-    const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * 1.5, y - s.y) < s.r);
+    const ratio = Number(book.ratio) || 1.5;
+    const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * ratio, y - s.y) < s.r);
     if (!hit) return false;
     playAnimal(hit.sound);
     const ring = document.createElement('span');
