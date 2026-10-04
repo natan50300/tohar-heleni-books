@@ -184,7 +184,7 @@
       "sleep": true
     }
   ],
-  "rev": "muto219w",
+  "rev": "mutz3sdo",
   "hint": "געו בהלני ובגשם",
   "coverSpots": [
     {
@@ -199,5 +199,6 @@
       "y": 0.88,
       "r": 0.14
     }
-  ]
+  ],
+  "sharp": true
 }
