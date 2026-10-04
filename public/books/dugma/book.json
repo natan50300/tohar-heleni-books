@@ -1,7 +1,7 @@
 {
   "order": 0,
   "title": "דוגמה: איורים רחבים",
-  "subtitle": "9 עמודים לבדיקה",
+  "subtitle": "14 עמודים לבדיקה",
   "for": "both",
   "hasArt": true,
   "palette": {
@@ -56,6 +56,31 @@
     {
       "text": "שוטפות ידיים וגם פנים,\nפְּלִיק וּפְלַק, המים נעימים.",
       "scene": "A small cozy bathroom with warm light. Heleni stands on a wooden step stool at the sink with her hands under a gentle stream of water, a few round droplets in the air. Tohar sits on a fluffy bath mat beside the stool holding a small towel, giggling."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה, יד ועוד יד,\nהופ! מוכנות לישון מיד.",
+      "scene": "Both girls now in their pajamas in the bedroom. Heleni proudly stretches both arms up in the air. Tohar sits and looks down at her own pajama sleeve, pulling at it with delight."
+    },
+    {
+      "outfit": "night",
+      "text": "הלני נותנת לטוהר נשיקה,\nמוּאָה! על הלחי המתוקה.",
+      "scene": "Heleni leans over and kisses Tohar on her round cheek. Tohar scrunches her eyes shut and smiles. Soft lamp light, tender close-up from the waist up."
+    },
+    {
+      "outfit": "night",
+      "text": "טוהר נותנת להלני חיבוק,\nחזק חזק, ואז... פיהוק.",
+      "scene": "Tohar wraps her short arms around Heleni's middle and presses her cheek against her. Heleni hugs her back with eyes closed, smiling. Both sit on a soft blanket."
+    },
+    {
+      "outfit": "night",
+      "text": "הכוכבים נדלקים אחד אחד,\nהלני סופרת אותם ביד.",
+      "scene": "The window at night, deep dusty-blue sky with three soft glowing stars and the moon. The two girls are seen from behind, small silhouettes sitting side by side on the window seat, Heleni pointing at the stars."
+    },
+    {
+      "outfit": "night",
+      "text": "הירח מאיר על שתי המיטות,\nאור רך על שתי אחיות קטנות.",
+      "scene": "Wide view of the quiet bedroom at night. Pale moonlight falls through the window across two small beds side by side, the toys asleep on the shelf. The girls are in their beds under soft blankets, still awake, looking at each other."
     }
   ],
   "ratio": 2
