@@ -10,5 +10,17 @@
       "to": "#7d6a8c"
     },
     "hasArt": true
+  },
+  {
+    "id": "tohar-bahava",
+    "order": 2,
+    "title": "טוהר בחווה",
+    "subtitle": "ספר עם קולות של חיות",
+    "for": "tohar",
+    "palette": {
+      "from": "#3c5a4a",
+      "to": "#b08d57"
+    },
+    "hasArt": true
   }
 ]
