@@ -31,6 +31,8 @@ for (const name of pageNames(book)) {
 const file = `${BOOKS_DIR}/${id}/book.json`;
 const json = JSON.parse(readFileSync(file, 'utf8'));
 json.hasArt = missing.length === 0;
+// Phones keep pictures forever; a new revision makes them fetch the new ones.
+json.rev = Date.now().toString(36);
 writeFileSync(file, JSON.stringify(json, null, 2) + '\n');
 console.log(missing.length ? `missing pages: ${missing.join(', ')}` : `${id}: all ${pageNames(book).length} pages ready`);
 execFileSync(process.execPath, ['scripts/build-index.mjs'], { stdio: 'inherit' });

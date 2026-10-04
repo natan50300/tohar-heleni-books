@@ -85,8 +85,8 @@ async function showLibrary() {
           <div class="cover" style="${paletteStyle(b.palette)}">
             ${
               b.hasArt
-                ? `<img loading="lazy" alt="" src="${BASE}books/${esc(b.id)}/cover-800.webp"
-                     srcset="${BASE}books/${esc(b.id)}/cover-800.webp 800w, ${BASE}books/${esc(b.id)}/cover-1600.webp 1600w"
+                ? `<img loading="lazy" alt="" src="${BASE}books/${esc(b.id)}/cover-800.webp?v=${b.rev || 0}"
+                     srcset="${BASE}books/${esc(b.id)}/cover-800.webp?v=${b.rev || 0} 800w, ${BASE}books/${esc(b.id)}/cover-1600.webp?v=${b.rev || 0} 1600w"
                      sizes="(max-width: 600px) 45vw, 200px">`
                 : ''
             }
@@ -173,7 +173,7 @@ async function openBook(id) {
 
   // Phones in landscape need the large file; choose once so the offline copy matches what is shown.
   const size = Math.max(screen.width, screen.height) * (devicePixelRatio || 1) > 1000 ? 1600 : 800;
-  const img = (name) => `${BASE}books/${id}/${name}-${size}.webp`;
+  const img = (name) => `${BASE}books/${id}/${name}-${size}.webp?v=${book.rev || 0}`;
   const pages = [
     { cover: true, text: book.title, sub: book.subtitle, src: img('cover'), spots: book.coverSpots },
     ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)), spots: p.spots })),
@@ -375,6 +375,11 @@ async function saveOffline(urls) {
   if (!('caches' in window)) return;
   try {
     const cache = await caches.open('books-v1');
+    // Drop pictures of this book that were saved from an older revision.
+    const folder = urls[0].slice(0, urls[0].lastIndexOf('/') + 1);
+    for (const req of await cache.keys()) {
+      if (req.url.includes(folder) && !urls.some((u) => req.url.endsWith(u))) await cache.delete(req);
+    }
     for (const url of urls) {
       if (!(await cache.match(url))) await cache.add(url).catch(() => {});
     }
