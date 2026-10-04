@@ -297,10 +297,11 @@ async function openBook(id) {
     .then((lock) => (wakeLock = lock))
     .catch(() => {});
 
-  // Where a touch lands on the picture itself (0..1).
+  // Where a touch lands on the picture itself (0..1), allowing for the strip trimmed off on wide screens.
   const onPicture = (clientX, clientY) => {
     const box = stage.getBoundingClientRect();
-    return [(clientX - box.left) / box.width, (clientY - box.top) / box.height];
+    const shown = Math.max(box.height, box.width / (Number(book.ratio) || 1.5));
+    return [(clientX - box.left) / box.width, (clientY - box.top + (shown - box.height) * 0.35) / shown];
   };
   // Animals answer when touched. Spots are {sound, x, y, r} in picture units; r is a share of the height.
   const touchAnimal = (clientX, clientY) => {
