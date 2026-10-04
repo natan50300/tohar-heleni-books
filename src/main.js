@@ -146,12 +146,12 @@ function showHelp() {
         <li>בוחרים ספר ומסובבים את הטלפון לרוחב.</li>
         <li>מדפדפים בהחלקה, כמו בספר עברי, או בלחיצה בצדי המסך.</li>
         <li>הכפתור ♪ מפעיל ומכבה את מנגינת הערש.</li>
-        <li>ב"טוהר בחווה" נוגעים בחיה כדי לשמוע את הקול שלה.</li>
+        <li>נוגעים בטוהר או בהלני באמצע האיור והן צוחקות. בחלק מהספרים גם החיות, השלולית והגשם משמיעים קול.</li>
       </ol>
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
       <h2>קולות החיות</h2>
-      <p>הקלטות אמיתיות מ-Wikimedia Commons. פרה, כבשה וברווז: Secretlondon (CC BY-SA 3.0). כלב: Amada44 (CC BY-SA 3.0). חתול: Heismark. תרנגול ותרנגולת: alys (נחלת הכלל). סוס: Briefer, Maigrot, Mandel ואחרים (CC BY 4.0).</p>
+      <p>הקלטות אמיתיות מ-Wikimedia Commons. פרה, כבשה וברווז: Secretlondon (CC BY-SA 3.0). כלב: Amada44 (CC BY-SA 3.0). חתול: Heismark. תרנגול ותרנגולת: alys (נחלת הכלל). סוס: Briefer, Maigrot, Mandel ואחרים (CC BY 4.0). צחוק: lmbubec (CC0), morgantj ו-reinsamba (CC BY 3.0). צפרדע: MichaeltheFox8621 (CC BY-SA 4.0). מים וגשם: ezwa, ジダネ (נחלת הכלל).</p>
       <h2>בלי אינטרנט</h2>
       <p>ספר שנפתח פעם אחת נשמר בטלפון, ואפשר לקרוא בו גם בלי אינטרנט.</p>
     </main>`;
@@ -185,7 +185,7 @@ async function openBook(id) {
       <div class="backdrop"></div>
       <div class="stage"></div>
       <div class="band"></div>
-      <div class="hint" hidden>👆 געו בחיה כדי לשמוע אותה</div>
+      <div class="hint" hidden>👆 ${esc(book.hint || 'געו בחיה כדי לשמוע אותה')}</div>
       <div class="end" hidden>
         <p>לילה טוב 🌙</p>
         <div class="end-actions">
@@ -225,7 +225,7 @@ async function openBook(id) {
     root.classList.toggle('is-cover', !!p?.cover);
     band.innerHTML = p ? `${esc(p.text).replace(/\n/g, '<br>')}${p.sub ? `<small>${esc(p.sub)}</small>` : ''}` : '';
     endEl.hidden = i !== last;
-    root.querySelector('.hint').hidden = !p?.spots;
+    root.querySelector('.hint').hidden = !(p && (p.spots || i === 0));
     backdrop.style.backgroundImage = p && book.hasArt ? `url("${p.src}")` : 'none';
     counter.textContent = i === 0 || i === last ? '' : `${i} / ${last - 1}`;
     prevBtn.disabled = i === 0;
@@ -315,13 +315,26 @@ async function openBook(id) {
     const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * ratio, y - s.y) < s.r);
     if (!hit) return false;
     playAnimal(hit.sound);
-    const ring = document.createElement('span');
-    ring.className = 'ring';
-    ring.style.left = clientX + 'px';
-    ring.style.top = clientY + 'px';
-    root.append(ring);
-    setTimeout(() => ring.remove(), 700);
+    ring(clientX, clientY);
     return true;
+  };
+
+  // A touch on the girls (the middle of the picture) answers with a laugh, a different one each time.
+  const LAUGHS = { tohar: ['laugh-baby'], heleni: ['laugh-girl', 'laugh-child'], both: ['laugh-girl', 'laugh-baby', 'laugh-child'] };
+  const laughs = book.laughs || LAUGHS[book.for] || LAUGHS.both;
+  let laughTurn = 0;
+  const giggle = (clientX, clientY) => {
+    playAnimal(laughs[laughTurn++ % laughs.length], 0.92 + Math.random() * 0.3);
+    ring(clientX, clientY);
+  };
+
+  const ring = (clientX, clientY) => {
+    const el = document.createElement('span');
+    el.className = 'ring';
+    el.style.left = clientX + 'px';
+    el.style.top = clientY + 'px';
+    root.append(el);
+    setTimeout(() => el.remove(), 700);
   };
 
   let startX = null;
@@ -344,6 +357,7 @@ async function openBook(id) {
       const x = e.clientX / innerWidth;
       if (x < 0.3) go(1);
       else if (x > 0.7) go(-1);
+      else if (!turning && idx < last) giggle(e.clientX, e.clientY);
     }
   });
   root.addEventListener('pointercancel', () => (startX = null));
@@ -367,7 +381,7 @@ async function openBook(id) {
   syncMusic();
   immerse(); // works when the book was opened by a tap; otherwise the first touch does it
   if (book.hasArt) saveOffline(pages.map((p) => p.src));
-  prepareAnimals([...new Set(pages.flatMap((p) => (p.spots || []).map((s) => s.sound)))]);
+  prepareAnimals([...new Set([...laughs, ...pages.flatMap((p) => (p.spots || []).map((s) => s.sound))])]);
 }
 
 // Keep every page of an opened book on the phone.

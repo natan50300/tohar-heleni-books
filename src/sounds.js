@@ -1,7 +1,9 @@
 // Animal voices: real recordings from Wikimedia Commons (credits are on the help page), in public/sounds.
 
 const BASE = import.meta.env.BASE_URL;
-const MAX_SECONDS = 4; // some recordings are long; a touch gets one short call
+const MAX_SECONDS = 4;
+// Animals are played a little higher and faster, so they sound small and friendly.
+const CUTE = { cow: 1.22, sheep: 1.15, duck: 1.15, dog: 1.25, cat: 1.1, rooster: 1.12, hen: 1.12, horse: 1.2, frog: 1.15 }; // some recordings are long; a touch gets one short call
 
 let ctx = null;
 let playing = null;
@@ -19,7 +21,7 @@ function load(name) {
   if (!buffers.has(name)) {
     buffers.set(
       name,
-      fetch(`${BASE}sounds/${name}.mp3?v=2`)
+      fetch(`${BASE}sounds/${name}.mp3?v=3`)
         .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error(name))))
         // Callback form: older iPhones do not return a promise here.
         .then((data) => new Promise((resolve, reject) => ctx.decodeAudioData(data, resolve, reject)))
@@ -38,7 +40,7 @@ export function prepareAnimals(names) {
   names.forEach(load);
 }
 
-export async function playAnimal(name) {
+export async function playAnimal(name, rate = CUTE[name] || 1) {
   if (!audio()) return;
   const buffer = await load(name);
   if (!buffer) return;
@@ -46,8 +48,9 @@ export async function playAnimal(name) {
   const source = ctx.createBufferSource();
   const gain = ctx.createGain();
   source.buffer = buffer;
+  source.playbackRate.value = rate;
   source.connect(gain).connect(ctx.destination);
-  const length = Math.min(buffer.duration, MAX_SECONDS);
+  const length = Math.min(buffer.duration / rate, MAX_SECONDS);
   const now = ctx.currentTime;
   gain.gain.setValueAtTime(1, now);
   gain.gain.setValueAtTime(1, now + Math.max(0, length - 0.3));
