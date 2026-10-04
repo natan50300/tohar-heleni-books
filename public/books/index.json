@@ -26,5 +26,19 @@
     "hasArt": true,
     "rev": "mutj0mjz",
     "sounds": true
+  },
+  {
+    "id": "heleni-vehageshem",
+    "order": 3,
+    "title": "הלני והגשם",
+    "subtitle": "טיף טף, שלוליות וקשת בענן",
+    "for": "heleni",
+    "palette": {
+      "from": "#3f5673",
+      "to": "#c9a94e"
+    },
+    "hasArt": true,
+    "rev": "mutnydzp",
+    "sounds": false
   }
 ]

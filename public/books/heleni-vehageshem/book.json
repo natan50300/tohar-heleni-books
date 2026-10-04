@@ -4,8 +4,11 @@
   "subtitle": "טיף טף, שלוליות וקשת בענן",
   "for": "heleni",
   "ratio": 2,
-  "hasArt": false,
-  "palette": { "from": "#3f5673", "to": "#c9a94e" },
+  "hasArt": true,
+  "palette": {
+    "from": "#3f5673",
+    "to": "#c9a94e"
+  },
   "outfits": {
     "home": {
       "heleni": "a lilac long-sleeved cotton top and matching lilac leggings, cream socks."
@@ -89,5 +92,6 @@
       "text": "טיף... טיף... העיניים נעצמות.\nלילה טוב, הלני, חלומות של קשתות.",
       "scene": "Heleni fast asleep in her bed, peaceful face, eyes closed, hugging a small plush bunny. Rain drops on the dark window, the lamp is off, the room is dim dusty blue with a faint warm night-light glow."
     }
-  ]
+  ],
+  "rev": "mutnydzp"
 }
