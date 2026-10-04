@@ -21,9 +21,10 @@ for (const name of pageNames(book)) {
     missing.push(name);
     continue;
   }
-  for (const w of [1600, 800]) {
+  // The large file is named -1600 but keeps up to 1800px of the source, so wide pictures stay sharp on phones.
+  for (const [label, w] of [[1600, book.ratio ? 1800 : 1600], [800, 800]]) {
     const h = Math.round(w / ratio);
-    await sharp(src).resize(w, h, { fit: 'cover' }).webp({ quality: 82 }).toFile(`${BOOKS_DIR}/${id}/${name}-${w}.webp`);
+    await sharp(src).resize(w, h, { fit: 'cover', withoutEnlargement: true }).webp({ quality: 88 }).toFile(`${BOOKS_DIR}/${id}/${name}-${label}.webp`);
   }
 }
 
