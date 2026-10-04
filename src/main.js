@@ -179,6 +179,7 @@ async function openBook(id) {
 
   app.innerHTML = `
     <main class="reader" style="${paletteStyle(book.palette)}">
+      <div class="backdrop"></div>
       <div class="stage"></div>
       <div class="band"></div>
       <div class="end" hidden>
@@ -199,6 +200,7 @@ async function openBook(id) {
 
   const root = app.querySelector('.reader');
   const stage = root.querySelector('.stage');
+  const backdrop = root.querySelector('.backdrop');
   const band = root.querySelector('.band');
   const endEl = root.querySelector('.end');
   const counter = root.querySelector('.counter');
@@ -219,6 +221,7 @@ async function openBook(id) {
     root.classList.toggle('is-cover', !!p?.cover);
     band.innerHTML = p ? `${esc(p.text).replace(/\n/g, '<br>')}${p.sub ? `<small>${esc(p.sub)}</small>` : ''}` : '';
     endEl.hidden = i !== last;
+    backdrop.style.backgroundImage = p && book.hasArt ? `url("${p.src}")` : 'none';
     counter.textContent = i === 0 || i === last ? '' : `${i} / ${last - 1}`;
     prevBtn.disabled = i === 0;
     nextBtn.disabled = i === last;
