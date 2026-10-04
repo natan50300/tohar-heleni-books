@@ -54,5 +54,19 @@
     "hasArt": true,
     "rev": "mutzqd10",
     "sounds": true
+  },
+  {
+    "id": "habalon-shel-tohar",
+    "order": 5,
+    "title": "הבלון של טוהר",
+    "subtitle": "בלון אדום אחד וטיול קטן",
+    "for": "tohar",
+    "palette": {
+      "from": "#7a3b3f",
+      "to": "#d9b98a"
+    },
+    "hasArt": true,
+    "rev": "muu1da60",
+    "sounds": false
   }
 ]

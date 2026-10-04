@@ -146,7 +146,7 @@ function showHelp() {
         <li>בוחרים ספר ומסובבים את הטלפון לרוחב.</li>
         <li>מדפדפים בהחלקה, כמו בספר עברי, או בלחיצה בצדי המסך.</li>
         <li>הכפתור ♪ למעלה מימין, ליד ה-✕, מדליק ומכבה את מנגינת הלילה טוב.</li>
-        <li>בספרים שמסומנים "🔊 נוגעים ושומעים": נוגעים בטוהר או בהלני והן צוחקות, וכשהן ישנות שומעים נשימות ושיר ערש. גם החיות, הגשם והגלים משמיעים קול. בשאר הספרים יש רק מנגינה.</li>
+        <li>בספרים שמסומנים "🔊 נוגעים ושומעים": נוגעים בטוהר או בהלני והן צוחקות, וכשהן ישנות שומעים נשימות ושיר ערש. גם החיות, הגשם והגלים משמיעים קול. בשאר הספרים יש רק צחוק ומנגינה.</li>
       </ol>
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
@@ -185,7 +185,7 @@ async function openBook(id) {
       <div class="backdrop"></div>
       <div class="stage"></div>
       <div class="band"></div>
-      <div class="hint" hidden>${book.quiet ? 'מנגינת לילה טוב: מדליקים ומכבים בכפתור ♪ למעלה מימין' : '👆 ' + esc(book.hint || 'געו בחיה כדי לשמוע אותה')}</div>
+      <div class="hint" hidden>${book.quiet ? `👆 געו ב${{ tohar: 'טוהר והיא צוחקת', heleni: 'הלני והיא צוחקת' }[book.for] || 'בנות והן צוחקות'} · מנגינה: כפתור ♪ למעלה מימין` :'👆 ' + esc(book.hint || 'געו בחיה כדי לשמוע אותה')}</div>
       <div class="end" hidden>
         <p>לילה טוב 🌙</p>
         <div class="end-actions">
@@ -324,7 +324,7 @@ async function openBook(id) {
   const laughs = book.laughs || LAUGHS[book.for] || LAUGHS.both;
   let laughTurn = 0;
   const giggle = (clientX, clientY) => {
-    if (book.quiet) return; // a quiet book: only the lullaby in the background
+    if (book.quiet && pages[idx]?.sleep) return; // a quiet book: laughs only, and she is not woken up
     ring(clientX, clientY);
     if (pages[idx]?.sleep) return playSleep(); // she is asleep: breathing and a lullaby instead of a laugh
     playAnimal(laughs[laughTurn++ % laughs.length], 0.92 + Math.random() * 0.3);
@@ -383,7 +383,7 @@ async function openBook(id) {
   syncMusic();
   immerse(); // works when the book was opened by a tap; otherwise the first touch does it
   if (book.hasArt) saveOffline(pages.map((p) => p.src));
-  if (!book.quiet) prepareAnimals([...new Set([...laughs, ...pages.flatMap((p) => (p.spots || []).map((s) => s.sound))])]);
+  prepareAnimals([...new Set([...laughs, ...pages.flatMap((p) => (p.spots || []).map((s) => s.sound))])]);
 }
 
 // Keep every page of an opened book on the phone.
