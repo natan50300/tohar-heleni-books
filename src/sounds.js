@@ -60,3 +60,51 @@ export async function playAnimal(name, rate = CUTE[name] || 1) {
   source.onended = () => playing === source && (playing = null);
   playing = source;
 }
+
+// A sleeping child answers a touch with soft breathing and a slow, quiet lullaby (synthesised, no files).
+const LULLABY = [[64, 0.5], [64, 0.5], [67, 2], [64, 0.5], [64, 0.5], [67, 2], [64, 0.5], [67, 0.5], [72, 1], [71, 1.5], [69, 0.5], [69, 1], [67, 2.5]];
+let sleepUntil = 0;
+
+export function playSleep() {
+  if (!audio() || ctx.currentTime < sleepUntil) return;
+  const beat = 0.62;
+  let at = ctx.currentTime + 0.1;
+  for (const [note, beats] of LULLABY) {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = 440 * 2 ** ((note + 12 - 69) / 12);
+    gain.gain.setValueAtTime(0, at);
+    gain.gain.linearRampToValueAtTime(0.11, at + 0.05);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + beats * beat + 0.9);
+    osc.connect(gain).connect(ctx.destination);
+    osc.start(at);
+    osc.stop(at + beats * beat + 1);
+    at += beats * beat;
+  }
+  const end = at + 1;
+
+  // Breathing: filtered noise that swells in and out.
+  const length = Math.ceil((end - ctx.currentTime) * ctx.sampleRate);
+  const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < length; i++) data[i] = Math.random() * 2 - 1;
+  const noise = ctx.createBufferSource();
+  noise.buffer = buffer;
+  const filter = ctx.createBiquadFilter();
+  filter.type = 'bandpass';
+  filter.frequency.value = 520;
+  filter.Q.value = 0.8;
+  const breath = ctx.createGain();
+  breath.gain.setValueAtTime(0, ctx.currentTime);
+  for (let t = ctx.currentTime + 0.2; t < end - 3; t += 3.4) {
+    breath.gain.linearRampToValueAtTime(0.09, t + 1.2); // in
+    breath.gain.linearRampToValueAtTime(0.01, t + 1.6);
+    breath.gain.linearRampToValueAtTime(0.06, t + 2.6); // out
+    breath.gain.linearRampToValueAtTime(0, t + 3.3);
+  }
+  noise.connect(filter).connect(breath).connect(ctx.destination);
+  noise.start();
+  noise.stop(end);
+  sleepUntil = end;
+}

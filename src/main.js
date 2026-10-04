@@ -2,7 +2,7 @@ import '@fontsource/varela-round/hebrew-400.css';
 import '@fontsource/varela-round/latin-400.css';
 import './style.css';
 import { startMusic, stopMusic } from './music.js';
-import { playAnimal, prepareAnimals } from './sounds.js';
+import { playAnimal, playSleep, prepareAnimals } from './sounds.js';
 
 const BASE = import.meta.env.BASE_URL;
 const app = document.getElementById('app');
@@ -146,7 +146,7 @@ function showHelp() {
         <li>בוחרים ספר ומסובבים את הטלפון לרוחב.</li>
         <li>מדפדפים בהחלקה, כמו בספר עברי, או בלחיצה בצדי המסך.</li>
         <li>הכפתור ♪ מפעיל ומכבה את מנגינת הערש.</li>
-        <li>נוגעים בטוהר או בהלני באמצע האיור והן צוחקות. בחלק מהספרים גם החיות, השלולית והגשם משמיעים קול.</li>
+        <li>נוגעים בטוהר או בהלני באמצע האיור והן צוחקות. כשהן ישנות שומעים נשימות ושיר ערש. בחלק מהספרים גם החיות, השלולית והגשם משמיעים קול.</li>
       </ol>
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
@@ -176,7 +176,7 @@ async function openBook(id) {
   const img = (name) => `${BASE}books/${id}/${name}-${size}.webp?v=${book.rev || 0}`;
   const pages = [
     { cover: true, text: book.title, sub: book.subtitle, src: img('cover'), spots: book.coverSpots },
-    ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)), spots: p.spots })),
+    ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)), spots: p.spots, sleep: p.sleep })),
   ];
   const last = pages.length; // index of the "the end" screen
 
@@ -324,8 +324,9 @@ async function openBook(id) {
   const laughs = book.laughs || LAUGHS[book.for] || LAUGHS.both;
   let laughTurn = 0;
   const giggle = (clientX, clientY) => {
-    playAnimal(laughs[laughTurn++ % laughs.length], 0.92 + Math.random() * 0.3);
     ring(clientX, clientY);
+    if (pages[idx]?.sleep) return playSleep(); // she is asleep: breathing and a lullaby instead of a laugh
+    playAnimal(laughs[laughTurn++ % laughs.length], 0.92 + Math.random() * 0.3);
   };
 
   const ring = (clientX, clientY) => {

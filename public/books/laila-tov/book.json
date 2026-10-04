@@ -85,12 +85,14 @@
     {
       "outfit": "night",
       "text": "העיניים נעצמות לאט לאט,\nעוד פיהוק קטן, וזה כמעט...",
-      "scene": "Close view of both girls lying in their beds, heads on pillows turned toward each other, eyelids heavy and almost closed. Tohar holds the grey bunny. Very dim, warm, calm light."
+      "scene": "Close view of both girls lying in their beds, heads on pillows turned toward each other, eyelids heavy and almost closed. Tohar holds the grey bunny. Very dim, warm, calm light.",
+      "sleep": true
     },
     {
       "outfit": "night",
       "text": "לילה טוב, טוהר והלני האהובות,\nחלומות מתוקים, אחיות טובות.",
-      "scene": "Both girls fast asleep in their beds under soft blankets, peaceful faces, eyes closed. The moon watches through the window, the room dark dusty blue with a faint warm night-light glow. Very still and quiet."
+      "scene": "Both girls fast asleep in their beds under soft blankets, peaceful faces, eyes closed. The moon watches through the window, the room dark dusty blue with a faint warm night-light glow. Very still and quiet.",
+      "sleep": true
     }
   ],
   "ratio": 2,
