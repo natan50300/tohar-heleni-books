@@ -70,12 +70,6 @@
           "x": 0.78,
           "y": 0.55,
           "r": 0.28
-        },
-        {
-          "sound": "splash",
-          "x": 0.55,
-          "y": 0.85,
-          "r": 0.14
         }
       ]
     },
@@ -125,12 +119,6 @@
       "text": "דלי אדום מלא במים,\nפְּלַאש! נשפך על הרגליים.",
       "scene": "Heleni tips a small red bucket and sea water splashes out over her own bare feet and the sand, drops flying. Both sisters laugh, Tohar sitting beside her with her hands up.",
       "spots": [
-        {
-          "sound": "splash",
-          "x": 0.5,
-          "y": 0.68,
-          "r": 0.2
-        },
         {
           "sound": "waves",
           "x": 0.9,

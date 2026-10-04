@@ -67,7 +67,7 @@
           "r": 0.2
         },
         {
-          "sound": "splash",
+          "sound": "rain",
           "x": 0.4,
           "y": 0.88,
           "r": 0.12
@@ -79,7 +79,7 @@
       "scene": "Heleni bends forward over a big round puddle on the path and sees her own reflection in the water, yellow coat and all. She looks curious and amused. The umbrella rests on her shoulder.",
       "spots": [
         {
-          "sound": "splash",
+          "sound": "rain",
           "x": 0.45,
           "y": 0.88,
           "r": 0.16
@@ -97,7 +97,7 @@
       "scene": "Heleni jumps with both red boots into the puddle, water splashing up in big round drops around her, mouth open in a joyful laugh. The umbrella is closed and lies on the grass beside the path.",
       "spots": [
         {
-          "sound": "splash",
+          "sound": "rain",
           "x": 0.36,
           "y": 0.76,
           "r": 0.2
@@ -119,7 +119,7 @@
           "r": 0.13
         },
         {
-          "sound": "splash",
+          "sound": "rain",
           "x": 0.36,
           "y": 0.8,
           "r": 0.12
@@ -185,7 +185,7 @@
     }
   ],
   "rev": "muto219w",
-  "hint": "געו בהלני, בשלולית ובגשם",
+  "hint": "געו בהלני ובגשם",
   "coverSpots": [
     {
       "sound": "rain",
@@ -194,7 +194,7 @@
       "r": 0.2
     },
     {
-      "sound": "splash",
+      "sound": "rain",
       "x": 0.5,
       "y": 0.88,
       "r": 0.14
