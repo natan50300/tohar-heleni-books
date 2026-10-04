@@ -82,5 +82,19 @@
     "hasArt": true,
     "rev": "muu4wbvv",
     "sounds": false
+  },
+  {
+    "id": "gan-shaashuim",
+    "order": 7,
+    "title": "טוהר והלני בגן השעשועים",
+    "subtitle": "נדנדה, מגלשה וארגז חול",
+    "for": "both",
+    "palette": {
+      "from": "#3f6a5a",
+      "to": "#e2c27a"
+    },
+    "hasArt": true,
+    "rev": "muu877hp",
+    "sounds": false
   }
 ]
