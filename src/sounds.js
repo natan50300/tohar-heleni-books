@@ -4,7 +4,9 @@ const BASE = import.meta.env.BASE_URL;
 const MAX_SECONDS = 4;
 // Animals are played a little higher and faster, so they sound small and friendly.
 // Some recordings are quiet; bring them up to the level of the others.
-const LOUDER = { rain: 3.5, splash: 2.2 };
+const LOUDER = { rain: 3.5, splash: 2.2, waves: 14 };
+// Long recordings: where to start, and how many seconds to play.
+const CLIP = { waves: [4, 7] };
 const CUTE = { cow: 1.22, sheep: 1.15, duck: 1.15, dog: 1.25, cat: 1.1, rooster: 1.12, hen: 1.12, horse: 1.2, frog: 1.15 }; // some recordings are long; a touch gets one short call
 
 let ctx = null;
@@ -23,7 +25,7 @@ function load(name) {
   if (!buffers.has(name)) {
     buffers.set(
       name,
-      fetch(`${BASE}sounds/${name}.mp3?v=4`)
+      fetch(`${BASE}sounds/${name}.mp3?v=5`)
         .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error(name))))
         // Callback form: older iPhones do not return a promise here.
         .then((data) => new Promise((resolve, reject) => ctx.decodeAudioData(data, resolve, reject)))
@@ -39,12 +41,11 @@ function load(name) {
 // Fetch a book's sounds ahead of time, so the first touch answers at once (and they are kept for offline use).
 export function prepareAnimals(names) {
   if (!audio()) return;
-  names.filter((n) => n !== 'waves').forEach(load);
+  names.forEach(load);
 }
 
 export async function playAnimal(name, rate = CUTE[name] || 1) {
   if (!audio()) return;
-  if (name === 'waves') return playWaves();
   const buffer = await load(name);
   if (!buffer) return;
   playing?.stop();
@@ -53,13 +54,15 @@ export async function playAnimal(name, rate = CUTE[name] || 1) {
   source.buffer = buffer;
   source.playbackRate.value = rate;
   source.connect(gain).connect(ctx.destination);
-  const length = Math.min(buffer.duration / rate, MAX_SECONDS);
+  const [offset, max] = CLIP[name] || [0, MAX_SECONDS];
+  const length = Math.min((buffer.duration - offset) / rate, max);
   const now = ctx.currentTime;
   const level = LOUDER[name] || 1;
-  gain.gain.setValueAtTime(level, now);
-  gain.gain.setValueAtTime(level, now + Math.max(0, length - 0.3));
+  gain.gain.setValueAtTime(offset ? 0 : level, now);
+  gain.gain.linearRampToValueAtTime(level, now + 0.4);
+  gain.gain.setValueAtTime(level, now + Math.max(0.4, length - (offset ? 1.5 : 0.3)));
   gain.gain.linearRampToValueAtTime(0, now + length);
-  source.start(now);
+  source.start(now, offset);
   source.stop(now + length);
   source.onended = () => playing === source && (playing = null);
   playing = source;
@@ -113,37 +116,3 @@ export function playSleep() {
   sleepUntil = end;
 }
 
-// Sea waves: filtered noise that swells and falls back, twice (the recording we had was silent).
-let wavesUntil = 0;
-
-function playWaves() {
-  if (ctx.currentTime < wavesUntil) return;
-  const seconds = 6.5;
-  const buffer = ctx.createBuffer(1, Math.ceil(seconds * ctx.sampleRate), ctx.sampleRate);
-  const data = buffer.getChannelData(0);
-  let last = 0;
-  for (let i = 0; i < data.length; i++) {
-    last = (last + 0.04 * (Math.random() * 2 - 1)) / 1.04; // brown-ish noise: a deep, soft rush
-    data[i] = last * 4;
-  }
-  const noise = ctx.createBufferSource();
-  noise.buffer = buffer;
-  const filter = ctx.createBiquadFilter();
-  filter.type = 'lowpass';
-  const gain = ctx.createGain();
-  const now = ctx.currentTime;
-  gain.gain.setValueAtTime(0, now);
-  filter.frequency.setValueAtTime(350, now);
-  for (const start of [0, 3.2]) {
-    const t = now + start;
-    gain.gain.linearRampToValueAtTime(0.9, t + 1.3); // the wave rolls in
-    filter.frequency.linearRampToValueAtTime(2600, t + 1.3);
-    gain.gain.linearRampToValueAtTime(0.12, t + 3.1); // and hisses back out
-    filter.frequency.linearRampToValueAtTime(500, t + 3.1);
-  }
-  gain.gain.linearRampToValueAtTime(0, now + seconds);
-  noise.connect(filter).connect(gain).connect(ctx.destination);
-  noise.start(now);
-  noise.stop(now + seconds);
-  wavesUntil = now + seconds - 1;
-}
