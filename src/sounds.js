@@ -4,10 +4,10 @@ const BASE = import.meta.env.BASE_URL;
 const MAX_SECONDS = 4;
 // Animals are played a little higher and faster, so they sound small and friendly.
 // Some recordings are quiet; bring them up to the level of the others.
-const LOUDER = { rain: 3.5, splash: 2, waves: 2 };
+const LOUDER = { rain: 3.5, waves: 2 };
 // Long recordings: where to start, and how many seconds to play.
-const CLIP = { waves: [5, 7.5], splash: [0, 2.6] };
-const CUTE = { cow: 1.22, sheep: 1.15, duck: 1, dog: 1.25, cat: 1.1, rooster: 1.12, hen: 1.12, horse: 1.2, frog: 1.15 }; // some recordings are long; a touch gets one short call
+const CLIP = { waves: [5, 7.5], cow: [0, 2.6], duck: [0, 2.6] };
+const CUTE = { cow: 1, sheep: 1.15, duck: 1, dog: 1.25, cat: 1.1, rooster: 1.12, hen: 1.12, horse: 1.2, frog: 1.15 }; // some recordings are long; a touch gets one short call
 
 let ctx = null;
 let playing = null;
@@ -25,7 +25,7 @@ function load(name) {
   if (!buffers.has(name)) {
     buffers.set(
       name,
-      fetch(`${BASE}sounds/${name}.mp3?v=8`)
+      fetch(`${BASE}sounds/${name}.mp3?v=9`)
         .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error(name))))
         // Callback form: older iPhones do not return a promise here.
         .then((data) => new Promise((resolve, reject) => ctx.decodeAudioData(data, resolve, reject)))
