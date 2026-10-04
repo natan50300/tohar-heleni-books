@@ -221,13 +221,27 @@ a {
   -webkit-user-select: none;
 }
 
-.page {
+.stage {
   position: absolute;
   inset: 0;
+  perspective: 2400px;
+}
+
+.sheet,
+.plain {
+  position: absolute;
+  inset: 0;
+}
+
+.plain {
   background: linear-gradient(140deg, var(--c1, #33405f), var(--c2, #6a5a78));
 }
 
-.page img {
+.plain.night {
+  background: radial-gradient(90% 90% at 50% 20%, var(--night-2), #0d101d);
+}
+
+.stage img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -236,6 +250,147 @@ a {
   /* wide phones crop the picture: keep the faces (top), give up the quiet strip (bottom) */
   object-position: 50% 12%;
   -webkit-user-drag: none;
+}
+
+/* A page cut at the spine: each half shows its own side of the full picture. */
+.half,
+.face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.half {
+  width: 50%;
+}
+
+.half.left {
+  left: 0;
+}
+
+.half.right {
+  left: 50%;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200%;
+}
+
+.left > .full {
+  left: 0;
+}
+
+.right > .full {
+  left: -100%;
+}
+
+/* The turning leaf. */
+.leaf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  transform-style: preserve-3d;
+  animation-duration: 900ms;
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1);
+  animation-fill-mode: both;
+}
+
+.leaf.fwd {
+  left: 0;
+  transform-origin: 100% 50%;
+  animation-name: turn-fwd;
+}
+
+.leaf.back {
+  left: 50%;
+  transform-origin: 0 50%;
+  animation-name: turn-back;
+}
+
+.face {
+  left: 0;
+  right: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.face.rear {
+  transform: rotateY(180deg);
+}
+
+/* Light falling across the paper while it turns. */
+.face::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  animation: 900ms linear both;
+}
+
+.face.front::after {
+  animation-name: shade-out;
+}
+
+.face.rear::after {
+  animation-name: shade-in;
+}
+
+@keyframes turn-fwd {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes turn-back {
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes shade-out {
+  50%,
+  100% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes shade-in {
+  0%,
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* The spine of the open book. */
+.gutter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 9vw;
+  margin-left: -4.5vw;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.26) 50%,
+    rgba(255, 255, 255, 0.07) 52%,
+    transparent
+  );
+}
+
+.is-cover .gutter {
+  display: none;
 }
 
 .band {
@@ -249,9 +404,19 @@ a {
   color: var(--cream);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
   text-wrap: balance;
+  transition: opacity 300ms ease;
+  pointer-events: none;
 }
 
-.page.is-cover .band {
+.band:empty {
+  display: none;
+}
+
+.turning .band {
+  opacity: 0;
+}
+
+.is-cover .band {
   font-size: clamp(26px, 10vh, 60px);
 }
 
@@ -262,50 +427,26 @@ a {
   margin-top: 0.2em;
 }
 
-.page.enter {
-  animation: turn-in 420ms ease both;
-}
-
-.page.leave {
-  animation: turn-out 420ms ease both;
-}
-
-@keyframes turn-in {
-  from {
-    opacity: 0;
-    transform: translateX(calc(var(--dir, 1) * -5%));
-  }
-}
-
-@keyframes turn-out {
-  to {
-    opacity: 0;
-    transform: translateX(calc(var(--dir, 1) * 3%));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page.enter,
-  .page.leave,
-  .rotate-phone {
-    animation: none !important;
-  }
-}
-
-.nav {
+.nav,
+.close,
+.music {
   position: absolute;
-  top: 50%;
-  width: 54px;
-  height: 54px;
-  margin-top: -27px;
   border-radius: 50%;
-  background: rgba(13, 16, 29, 0.35);
-  color: rgba(241, 230, 210, 0.75);
-  font-size: 26px;
-  line-height: 1;
+  background: rgba(13, 16, 29, 0.28);
+  color: rgba(241, 230, 210, 0.7);
   display: grid;
   place-items: center;
   z-index: 3;
+  text-decoration: none;
+}
+
+.nav {
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  font-size: 24px;
+  line-height: 1;
 }
 
 .nav.next {
@@ -321,20 +462,25 @@ a {
   pointer-events: none;
 }
 
-.close {
-  position: absolute;
+.close,
+.music {
   top: calc(var(--sat) + 10px);
+  width: 44px;
+  height: 44px;
+  font-size: 19px;
+}
+
+.close {
   right: calc(var(--sar) + 10px);
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: rgba(13, 16, 29, 0.35);
-  color: rgba(241, 230, 210, 0.75);
-  font-size: 20px;
-  z-index: 3;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
+}
+
+.music {
+  right: calc(var(--sar) + 64px);
+}
+
+.music.off {
+  opacity: 0.45;
+  text-decoration: line-through;
 }
 
 .counter {
@@ -354,7 +500,18 @@ a {
   place-content: center;
   gap: 4vh;
   text-align: center;
-  background: radial-gradient(90% 90% at 50% 20%, var(--night-2), #0d101d);
+  z-index: 2;
+  animation: fade-in 500ms ease both;
+}
+
+.end[hidden] {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
 }
 
 .end p {
@@ -377,6 +534,28 @@ a {
   place-items: center;
   text-decoration: none;
   font-size: 17px;
+}
+
+.install {
+  display: block;
+  margin: 28px auto 0;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 23px;
+  background: rgba(241, 230, 210, 0.1);
+  color: var(--cream);
+  font-size: 15px;
+}
+
+.install[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotate-phone,
+  .end {
+    animation: none !important;
+  }
 }
 
 /* ---------- "Rotate your phone" (reader only, portrait only) ---------- */

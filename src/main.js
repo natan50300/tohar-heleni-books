@@ -1,6 +1,7 @@
 import '@fontsource/varela-round/hebrew-400.css';
 import '@fontsource/varela-round/latin-400.css';
 import './style.css';
+import { startMusic, stopMusic } from './music.js';
 
 const BASE = import.meta.env.BASE_URL;
 const app = document.getElementById('app');
@@ -11,6 +12,7 @@ const FILTERS = [
   ['tohar', 'טוהר'],
   ['heleni', 'הלני'],
 ];
+const TURN_MS = 900;
 
 const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -29,6 +31,8 @@ const store = {
     } catch {}
   },
 };
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isInstalled = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 
 async function getJSON(path) {
   const res = await fetch(BASE + path);
@@ -37,6 +41,14 @@ async function getJSON(path) {
 }
 
 const paletteStyle = (p = {}) => `--c1:${esc(p.from || '#33405f')};--c2:${esc(p.to || '#6a5a78')}`;
+
+// Android offers a real install prompt; keep it until the user asks for it.
+let installPrompt = null;
+addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  installPrompt = e;
+  document.querySelector('.install')?.removeAttribute('hidden');
+});
 
 // ---------- Library ----------
 
@@ -58,6 +70,7 @@ async function showLibrary() {
         ${FILTERS.map(([id, label]) => `<button class="chip" data-filter="${id}" aria-pressed="${id === filter}">${label}</button>`).join('')}
       </nav>
       <section class="shelves"></section>
+      <button class="install" ${isInstalled() ? 'hidden' : ''}>📱 להתקין כאפליקציה (בלי שורת הכתובת)</button>
     </main>`;
 
   const shelves = app.querySelector('.shelves');
@@ -93,6 +106,16 @@ async function showLibrary() {
     app.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', c === chip));
     draw(chip.dataset.filter);
   });
+
+  app.querySelector('.install').addEventListener('click', async () => {
+    if (!installPrompt) {
+      location.hash = '#/help';
+      return;
+    }
+    installPrompt.prompt();
+    await installPrompt.userChoice.catch(() => {});
+    installPrompt = null;
+  });
 }
 
 // ---------- Help ----------
@@ -103,29 +126,36 @@ function showHelp() {
     <main class="help">
       <a class="back" href="#/">→ חזרה לספרים</a>
       <h1>איך משתמשים</h1>
-      <h2>הוספה למסך הבית באייפון</h2>
+      <h2>התקנה כאפליקציה באייפון</h2>
       <ol>
         <li>פותחים את האתר ב-Safari.</li>
         <li>לוחצים על כפתור השיתוף (ריבוע עם חץ למעלה).</li>
-        <li>גוללים ובוחרים "הוסף למסך הבית".</li>
-        <li>לוחצים "הוסף". מעכשיו יש אייקון כמו לאפליקציה.</li>
+        <li>גוללים ובוחרים "הוסף למסך הבית", ואז "הוסף".</li>
+        <li>פותחים מהאייקון החדש. שם אין שורת כתובת.</li>
+      </ol>
+      <h2>התקנה כאפליקציה באנדרואיד</h2>
+      <ol>
+        <li>לוחצים על שלוש הנקודות בדפדפן.</li>
+        <li>בוחרים "הוסף למסך הבית" או "התקן אפליקציה".</li>
+        <li>פותחים מהאייקון החדש.</li>
       </ol>
       <h2>קריאה</h2>
       <ol>
         <li>בוחרים ספר ומסובבים את הטלפון לרוחב.</li>
-        <li>מדפדפים בהחלקה, כמו בספר עברי, או בחיצים בצדדים.</li>
+        <li>מדפדפים בהחלקה, כמו בספר עברי, או בלחיצה בצדי המסך.</li>
+        <li>הכפתור ♪ מפעיל ומכבה את מנגינת הערש.</li>
         <li>הספר זוכר באיזה עמוד עצרתם.</li>
       </ol>
+      <h2>אם אין מנגינה באייפון</h2>
+      <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
       <h2>בלי אינטרנט</h2>
       <p>ספר שנפתח פעם אחת נשמר בטלפון, ואפשר לקרוא בו גם בלי אינטרנט.</p>
-      <h2>אם הטלפון לא מסתובב</h2>
-      <p>פותחים את מרכז הבקרה ומכבים את "נעילת כיוון המסך".</p>
     </main>`;
 }
 
 // ---------- Reader ----------
 
-let reader = null;
+let closeReader = null;
 
 async function openBook(id) {
   document.body.dataset.view = 'reader';
@@ -144,11 +174,22 @@ async function openBook(id) {
     { cover: true, text: book.title, sub: book.subtitle, src: img('cover') },
     ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)) })),
   ];
+  const last = pages.length; // index of the "the end" screen
 
   app.innerHTML = `
     <main class="reader" style="${paletteStyle(book.palette)}">
       <div class="stage"></div>
+      <div class="gutter"></div>
+      <div class="band"></div>
+      <div class="end" hidden>
+        <p>לילה טוב 🌙</p>
+        <div class="end-actions">
+          <button class="btn" data-again>לקרוא שוב</button>
+          <a class="btn" href="#/">חזרה לספרים</a>
+        </div>
+      </div>
       <a class="close" href="#/" aria-label="חזרה לספרים">✕</a>
+      <button class="music" aria-label="מנגינה">♪</button>
       <span class="counter"></span>
       <button class="nav prev" aria-label="העמוד הקודם">›</button>
       <button class="nav next" aria-label="העמוד הבא">‹</button>
@@ -156,70 +197,105 @@ async function openBook(id) {
 
   const root = app.querySelector('.reader');
   const stage = root.querySelector('.stage');
+  const band = root.querySelector('.band');
+  const endEl = root.querySelector('.end');
   const counter = root.querySelector('.counter');
   const prevBtn = root.querySelector('.prev');
   const nextBtn = root.querySelector('.next');
+  const musicBtn = root.querySelector('.music');
   const key = `page:${id}`;
-  const last = pages.length; // index of the "the end" screen
   let idx = Math.min(Number(store.get(key)) || 0, last - 1);
+  let turning = false;
 
-  const pageEl = (i) => {
-    const el = document.createElement('div');
-    if (i === last) {
-      el.className = 'page end';
-      el.innerHTML = `<p>לילה טוב 🌙</p>
-        <div class="end-actions">
-          <button class="btn" data-again>לקרוא שוב</button>
-          <a class="btn" href="#/">חזרה לספרים</a>
-        </div>`;
-      return el;
-    }
+  // What fills the whole screen for page i.
+  const fill = (i) =>
+    i === last || !book.hasArt ? `<div class="plain${i === last ? ' night' : ''}"></div>` : `<img alt="" draggable="false" src="${pages[i].src}">`;
+  // One half of page i, cut at the spine.
+  const half = (i, side, cls = 'half') => `<div class="${cls} ${side}"><div class="full">${fill(i)}</div></div>`;
+
+  const setChrome = (i) => {
     const p = pages[i];
-    el.className = 'page' + (p.cover ? ' is-cover' : '');
-    const text = esc(p.text).replace(/\n/g, '<br>');
-    el.innerHTML = `${book.hasArt ? `<img alt="" draggable="false" src="${p.src}">` : ''}
-      <div class="band">${text}${p.sub ? `<small>${esc(p.sub)}</small>` : ''}</div>`;
-    return el;
-  };
-
-  const show = (i, dir = 0) => {
-    const old = stage.querySelector('.page:not(.leave)');
-    const el = pageEl(i);
-    if (old && dir) {
-      el.style.setProperty('--dir', dir);
-      old.style.setProperty('--dir', dir);
-      el.classList.add('enter');
-      old.classList.add('leave');
-      old.addEventListener('animationend', () => old.remove(), { once: true });
-      setTimeout(() => old.remove(), 500);
-    } else if (old) {
-      old.remove();
-    }
-    stage.append(el);
-    idx = i;
-    store.set(key, i === last ? 0 : i);
+    root.classList.toggle('is-cover', !!p?.cover);
+    band.innerHTML = p ? `${esc(p.text).replace(/\n/g, '<br>')}${p.sub ? `<small>${esc(p.sub)}</small>` : ''}` : '';
+    endEl.hidden = i !== last;
     counter.textContent = i === 0 || i === last ? '' : `${i} / ${last - 1}`;
     prevBtn.disabled = i === 0;
     nextBtn.disabled = i === last;
-    if (book.hasArt && pages[i + 1]) new Image().src = pages[i + 1].src;
   };
 
-  // Hebrew book: the next page is on the left.
+  const settle = (i) => {
+    stage.innerHTML = `<div class="sheet">${fill(i)}</div>`;
+    idx = i;
+    store.set(key, i === last ? 0 : i);
+    setChrome(i);
+    root.classList.remove('turning');
+    turning = false;
+    // Have the neighbours ready so a turn never shows an empty page.
+    if (book.hasArt) [i + 1, i - 1].forEach((n) => pages[n] && (new Image().src = pages[n].src));
+  };
+
+  // A real page turn: the leaf swings over the spine. Its front is half of the page we leave,
+  // its back is half of the page we arrive at. Forward in a Hebrew book = left leaf turns to the right.
+  const turn = (to, step) => {
+    if (reducedMotion()) return settle(to);
+    turning = true;
+    root.classList.add('turning');
+    const [leafSide, staySide, dirClass] = step > 0 ? ['left', 'right', 'fwd'] : ['right', 'left', 'back'];
+    stage.innerHTML = `
+      <div class="sheet">${fill(to)}</div>
+      ${half(idx, staySide)}
+      <div class="leaf ${dirClass}">
+        ${half(idx, leafSide, 'face front')}
+        ${half(to, staySide, 'face rear')}
+      </div>`;
+    setTimeout(() => setChrome(to), TURN_MS / 2);
+    setTimeout(() => settle(to), TURN_MS);
+  };
+
   const go = (step) => {
     const to = idx + step;
-    if (to < 0 || to > last) return;
-    show(to, step);
+    if (turning || to < 0 || to > last) return;
+    turn(to, step);
   };
 
   prevBtn.onclick = () => go(-1);
   nextBtn.onclick = () => go(1);
-  root.addEventListener('click', (e) => {
-    if (e.target.closest('[data-again]')) show(0, -1);
+  endEl.addEventListener('click', (e) => {
+    if (e.target.closest('[data-again]')) turn(0, -1);
   });
+
+  // ----- music -----
+  let musicOn = store.get('music') !== 'off';
+  const syncMusic = () => {
+    musicBtn.classList.toggle('off', !musicOn);
+    if (musicOn) startMusic();
+    else stopMusic();
+  };
+  musicBtn.onclick = () => {
+    musicOn = !musicOn;
+    store.set('music', musicOn ? 'on' : 'off');
+    syncMusic();
+  };
+
+  // ----- full screen, landscape, screen stays on (where the phone allows it) -----
+  let wakeLock = null;
+  const immerse = async () => {
+    if (musicOn) startMusic(); // browsers only allow sound after a touch
+    if (isInstalled()) return;
+    try {
+      if (!document.fullscreenElement) await document.documentElement.requestFullscreen?.({ navigationUI: 'hide' });
+      await screen.orientation?.lock?.('landscape');
+    } catch {}
+  };
+  navigator.wakeLock
+    ?.request('screen')
+    .then((lock) => (wakeLock = lock))
+    .catch(() => {});
 
   let startX = null;
   let startY = 0;
   root.addEventListener('pointerdown', (e) => {
+    immerse();
     if (e.target.closest('button, a')) return;
     startX = e.clientX;
     startY = e.clientY;
@@ -245,9 +321,18 @@ async function openBook(id) {
     else if (e.key === 'Escape') location.hash = '#/';
   };
   addEventListener('keydown', onKey);
-  reader = () => removeEventListener('keydown', onKey);
 
-  show(idx);
+  closeReader = () => {
+    removeEventListener('keydown', onKey);
+    stopMusic();
+    wakeLock?.release?.().catch(() => {});
+    screen.orientation?.unlock?.();
+    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+  };
+
+  settle(idx);
+  syncMusic();
+  immerse(); // works when the book was opened by a tap; otherwise the first touch does it
   if (book.hasArt) saveOffline(pages.map((p) => p.src));
 }
 
@@ -265,8 +350,8 @@ async function saveOffline(urls) {
 // ---------- Router ----------
 
 function route() {
-  reader?.();
-  reader = null;
+  closeReader?.();
+  closeReader = null;
   const hash = location.hash.slice(1) || '/';
   const m = hash.match(/^\/book\/([\w-]+)$/);
   if (m) openBook(m[1]);
