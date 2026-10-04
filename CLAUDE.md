@@ -38,3 +38,10 @@
 - האתר: https://natan50300.github.io/tohar-heleni-books/ (הקישור קבוע, ספרים חדשים מופיעים בו לבד).
 - GitHub Pages מוגש מהענף `gh-pages`. קובץ ה-Actions (`.github/workflows/deploy.yml`) מוכן אבל לא הועלה, כי לטוקן של `gh` אין הרשאת `workflow`. כדי לעבור לפריסה אוטומטית: `gh auth refresh -s workflow`, להעלות את הקובץ ולהעביר את Pages ל-"GitHub Actions".
 - ה-`base` ב-`vite.config.js` חייב להיות שם ה-repo.
+
+## פורמט רחב (מ-2026-10-04)
+
+- כל הספרים ביחס 2:1 (`"ratio": 2` ב-book.json). איורי המקור ב-`raw/<id>-wide/`. ספר חדש מבקשים מ-ChatGPT ישר כ-"wide 2:1 image".
+- שמירה מ-ChatGPT באיכות מלאה: להציג את האיור בגודל טבעי, לצלם 4 פינות ולחבר עם `raw/tiles.mjs`. לפני כל צילום להריץ את `raw/wake.ps1` (המסך של המחשב נרדם והצילום נתקע).
+- `npm run process` מעדכן `rev` בספר, כדי שטלפונים יורידו איורים שהוחלפו.
+- הספר הבא: `heleni-vehageshem` (הטקסט והסצנות מוכנים, האיורים עוד לא נוצרו).
