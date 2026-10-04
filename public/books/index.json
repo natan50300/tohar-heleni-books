@@ -68,5 +68,19 @@
     "hasArt": true,
     "rev": "muu1da60",
     "sounds": false
+  },
+  {
+    "id": "hadubi-shel-heleni",
+    "order": 6,
+    "title": "הדובי של הלני",
+    "subtitle": "יום שלם עם החבר הכי רך",
+    "for": "heleni",
+    "palette": {
+      "from": "#6b4a3a",
+      "to": "#e3b9a0"
+    },
+    "hasArt": true,
+    "rev": "muu4wbvv",
+    "sounds": false
   }
 ]
