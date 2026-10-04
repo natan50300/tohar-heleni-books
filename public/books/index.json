@@ -40,5 +40,19 @@
     "hasArt": true,
     "rev": "muto219w",
     "sounds": true
+  },
+  {
+    "id": "yom-bayam",
+    "order": 4,
+    "title": "טוהר והלני בים",
+    "subtitle": "גלים, חול ושחף אחד",
+    "for": "both",
+    "palette": {
+      "from": "#2f6f8a",
+      "to": "#e0b77a"
+    },
+    "hasArt": true,
+    "rev": "mutscctg",
+    "sounds": true
   }
 ]
