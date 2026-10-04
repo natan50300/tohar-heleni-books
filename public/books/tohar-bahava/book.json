@@ -1,7 +1,7 @@
 {
   "order": 2,
   "title": "טוהר בחווה",
-  "subtitle": "ספר עם קולות של חיות",
+  "subtitle": "געו בחיה כדי לשמוע את הקול שלה",
   "for": "tohar",
   "hasArt": true,
   "palette": {
@@ -21,69 +21,289 @@
   "pages": [
     {
       "text": "בוקר טוב, טוהר! איזה יום יפה,\nהולכים לחווה. מי שם מחכה?",
-      "scene": "Soft morning light. Tohar stands holding the lower rail of a wooden farm gate with both hands, looking through it with wide curious eyes at a green farmyard and a red barn in the distance."
+      "scene": "Soft morning light. Tohar stands holding the lower rail of a wooden farm gate with both hands, looking through it with wide curious eyes at a green farmyard and a red barn in the distance.",
+      "spots": [
+        {
+          "sound": "cow",
+          "x": 0.66,
+          "y": 0.32,
+          "r": 0.17
+        },
+        {
+          "sound": "sheep",
+          "x": 0.84,
+          "y": 0.4,
+          "r": 0.13
+        },
+        {
+          "sound": "duck",
+          "x": 0.83,
+          "y": 0.55,
+          "r": 0.09
+        }
+      ]
     },
     {
       "text": "מי עומדת ליד הגדר?\nפרה גדולה: מוּוּוּ! בוקר נהדר!",
-      "scene": "A big gentle brown-and-white cow leans her head over a wooden fence, mouth open as if mooing. Tohar sits on the grass in front of the fence, looking up at the cow in happy surprise."
+      "scene": "A big gentle brown-and-white cow leans her head over a wooden fence, mouth open as if mooing. Tohar sits on the grass in front of the fence, looking up at the cow in happy surprise.",
+      "spots": [
+        {
+          "sound": "cow",
+          "x": 0.31,
+          "y": 0.24,
+          "r": 0.3
+        }
+      ]
     },
     {
       "text": "טוהר אומרת: מוּוּ! גם אני!\nהפרה מחייכת: את חברה שלי.",
-      "scene": "Close view: Tohar, mouth rounded as if saying moo, reaches one small hand up toward the cow's soft nose. The cow lowers her head with kind, half-closed eyes."
+      "scene": "Close view: Tohar, mouth rounded as if saying moo, reaches one small hand up toward the cow's soft nose. The cow lowers her head with kind, half-closed eyes.",
+      "spots": [
+        {
+          "sound": "cow",
+          "x": 0.31,
+          "y": 0.27,
+          "r": 0.3
+        }
+      ]
     },
     {
       "text": "מי קופצת בעשב הירוק?\nכבשה רכה: מֶהההה! איזה צחוק!",
-      "scene": "A fluffy white sheep hops playfully in a meadow of soft green grass and small flowers. Tohar sits in the grass clapping her hands and laughing."
+      "scene": "A fluffy white sheep hops playfully in a meadow of soft green grass and small flowers. Tohar sits in the grass clapping her hands and laughing.",
+      "spots": [
+        {
+          "sound": "sheep",
+          "x": 0.73,
+          "y": 0.4,
+          "r": 0.24
+        }
+      ]
     },
     {
       "text": "מי שוחה באגם הקטן?\nברווז צהוב: גַּע גַּע! בואו לכאן!",
-      "scene": "A small calm farm pond with reeds. A yellow duck swims on the water, beak open. Tohar sits safely on the grassy bank a little away from the water, pointing at the duck with delight."
+      "scene": "A small calm farm pond with reeds. A yellow duck swims on the water, beak open. Tohar sits safely on the grassy bank a little away from the water, pointing at the duck with delight.",
+      "spots": [
+        {
+          "sound": "duck",
+          "x": 0.82,
+          "y": 0.56,
+          "r": 0.14
+        }
+      ]
     },
     {
       "text": "טוהר מנופפת: שלום, שלום!\nפְּלִיק, פְּלַק במים, איזה יום!",
-      "scene": "Tohar waves her hand at the yellow duck, which flaps its wings and makes small round splashes on the pond. Tohar giggles with her eyes scrunched."
+      "scene": "Tohar waves her hand at the yellow duck, which flaps its wings and makes small round splashes on the pond. Tohar giggles with her eyes scrunched.",
+      "spots": [
+        {
+          "sound": "duck",
+          "x": 0.8,
+          "y": 0.57,
+          "r": 0.15
+        }
+      ]
     },
     {
       "text": "מי רץ מהר מהר בחצר?\nכלבלב קטן: הַב הַב! רוצה חבר!",
-      "scene": "A small golden-brown puppy with floppy ears runs across the farmyard toward Tohar, ears flying, tongue out. Tohar sits on the ground with her arms open wide."
+      "scene": "A small golden-brown puppy with floppy ears runs across the farmyard toward Tohar, ears flying, tongue out. Tohar sits on the ground with her arms open wide.",
+      "spots": [
+        {
+          "sound": "dog",
+          "x": 0.77,
+          "y": 0.46,
+          "r": 0.22
+        },
+        {
+          "sound": "hen",
+          "x": 0.07,
+          "y": 0.42,
+          "r": 0.12
+        }
+      ]
     },
     {
       "text": "הכלבלב מלקק לטוהר את היד,\nחִי חִי חִי! מדגדג מיד.",
-      "scene": "The puppy licks Tohar's outstretched hand. Tohar laughs out loud, head tilted back a little, eyes closed with joy."
+      "scene": "The puppy licks Tohar's outstretched hand. Tohar laughs out loud, head tilted back a little, eyes closed with joy.",
+      "spots": [
+        {
+          "sound": "dog",
+          "x": 0.71,
+          "y": 0.46,
+          "r": 0.22
+        },
+        {
+          "sound": "hen",
+          "x": 0.08,
+          "y": 0.37,
+          "r": 0.12
+        }
+      ]
     },
     {
       "text": "מי ישנה לה על הקש?\nחתולה אפורה: מְיָאוּ... ששש, בלי רעש.",
-      "scene": "Inside the barn, warm light through a window. A soft grey cat lies curled up asleep on a pile of golden straw. Tohar crouches nearby with one finger on her lips, looking at the cat quietly."
+      "scene": "Inside the barn, warm light through a window. A soft grey cat lies curled up asleep on a pile of golden straw. Tohar crouches nearby with one finger on her lips, looking at the cat quietly.",
+      "spots": [
+        {
+          "sound": "cat",
+          "x": 0.75,
+          "y": 0.48,
+          "r": 0.22
+        }
+      ]
     },
     {
       "text": "מי עומד למעלה על הגג?\nתרנגול: קוּקוּרִיקוּ! היום יום חג!",
-      "scene": "A proud red-brown rooster stands on the roof of a small wooden henhouse, beak open, crowing. Tohar sits on the ground below, looking up and pointing at him with her mouth open in wonder."
+      "scene": "A proud red-brown rooster stands on the roof of a small wooden henhouse, beak open, crowing. Tohar sits on the ground below, looking up and pointing at him with her mouth open in wonder.",
+      "spots": [
+        {
+          "sound": "rooster",
+          "x": 0.78,
+          "y": 0.18,
+          "r": 0.17
+        },
+        {
+          "sound": "hen",
+          "x": 0.56,
+          "y": 0.59,
+          "r": 0.11
+        },
+        {
+          "sound": "hen",
+          "x": 0.06,
+          "y": 0.57,
+          "r": 0.1
+        }
+      ]
     },
     {
       "text": "מי מציץ מתוך האורווה?\nסוס חום צוהל: אִיהָהָה! באהבה.",
-      "scene": "A gentle brown horse with a white blaze looks out over the half-door of a wooden stable. Tohar stands in front of the stable holding a wooden post for balance, looking up at the horse and smiling."
+      "scene": "A gentle brown horse with a white blaze looks out over the half-door of a wooden stable. Tohar stands in front of the stable holding a wooden post for balance, looking up at the horse and smiling.",
+      "spots": [
+        {
+          "sound": "horse",
+          "x": 0.67,
+          "y": 0.22,
+          "r": 0.25
+        }
+      ]
     },
     {
       "text": "טוהר נותנת לסוס גזר כתום,\nקְרַאנְץ', קְרַאנְץ'! נגמר פתאום.",
-      "scene": "Tohar holds up an orange carrot with both hands. The brown horse lowers his head and gently nibbles the tip of the carrot. Tohar watches, delighted."
+      "scene": "Tohar holds up an orange carrot with both hands. The brown horse lowers his head and gently nibbles the tip of the carrot. Tohar watches, delighted.",
+      "spots": [
+        {
+          "sound": "horse",
+          "x": 0.66,
+          "y": 0.22,
+          "r": 0.25
+        }
+      ]
     },
     {
       "text": "השמש שוקעת, היום נגמר,\nכל החיות מפהקות כבר.",
-      "scene": "Sunset over the farm, dusty pink and orange sky. The cow, the sheep, the duck and the puppy are settling down in the farmyard, yawning sleepily. Tohar sits among them rubbing one eye with her fist."
+      "scene": "Sunset over the farm, dusty pink and orange sky. The cow, the sheep, the duck and the puppy are settling down in the farmyard, yawning sleepily. Tohar sits among them rubbing one eye with her fist.",
+      "spots": [
+        {
+          "sound": "cow",
+          "x": 0.58,
+          "y": 0.38,
+          "r": 0.2
+        },
+        {
+          "sound": "dog",
+          "x": 0.17,
+          "y": 0.55,
+          "r": 0.16
+        },
+        {
+          "sound": "sheep",
+          "x": 0.67,
+          "y": 0.54,
+          "r": 0.12
+        },
+        {
+          "sound": "duck",
+          "x": 0.87,
+          "y": 0.58,
+          "r": 0.1
+        }
+      ]
     },
     {
       "text": "לילה טוב, כבשה. לילה טוב, פרה.\nלילה טוב, ברווז. מחר נבוא בחזרה.",
-      "scene": "Dusk, soft violet sky with the first star. The cow lies in the grass, the sheep curled beside her, the duck tucked with its head under its wing. Tohar waves goodnight to them with a small hand."
+      "scene": "Dusk, soft violet sky with the first star. The cow lies in the grass, the sheep curled beside her, the duck tucked with its head under its wing. Tohar waves goodnight to them with a small hand.",
+      "spots": [
+        {
+          "sound": "cow",
+          "x": 0.51,
+          "y": 0.45,
+          "r": 0.2
+        },
+        {
+          "sound": "sheep",
+          "x": 0.67,
+          "y": 0.54,
+          "r": 0.12
+        },
+        {
+          "sound": "duck",
+          "x": 0.87,
+          "y": 0.61,
+          "r": 0.1
+        }
+      ]
     },
     {
       "outfit": "night",
       "text": "טוהר מפהקת פיהוק גדול,\nהיה יום ארוך, ראינו הכל.",
-      "scene": "A cozy small bedroom in the farmhouse at night, warm lamp light. Tohar, now in her pajamas, sits in a small white wooden cot yawning widely with her eyes closed, holding a small plush sheep. A window shows the dark farm and the moon."
+      "scene": "A cozy small bedroom in the farmhouse at night, warm lamp light. Tohar, now in her pajamas, sits in a small white wooden cot yawning widely with her eyes closed, holding a small plush sheep. A window shows the dark farm and the moon.",
+      "spots": [
+        {
+          "sound": "sheep",
+          "x": 0.31,
+          "y": 0.48,
+          "r": 0.13
+        }
+      ]
     },
     {
       "outfit": "night",
       "text": "לילה טוב, טוהר, חלום נעים,\nמחר שוב נבקר את כל החברים.",
-      "scene": "Tohar fast asleep in the white cot under a soft blanket, hugging the small plush sheep, peaceful face, eyes closed. Through the window, the moon shines over the sleeping farm and the red barn. Dim, dusty-blue night with a faint warm glow."
+      "scene": "Tohar fast asleep in the white cot under a soft blanket, hugging the small plush sheep, peaceful face, eyes closed. Through the window, the moon shines over the sleeping farm and the red barn. Dim, dusty-blue night with a faint warm glow.",
+      "spots": [
+        {
+          "sound": "sheep",
+          "x": 0.28,
+          "y": 0.52,
+          "r": 0.13
+        }
+      ]
+    }
+  ],
+  "coverSpots": [
+    {
+      "sound": "cow",
+      "x": 0.2,
+      "y": 0.25,
+      "r": 0.24
+    },
+    {
+      "sound": "dog",
+      "x": 0.24,
+      "y": 0.57,
+      "r": 0.17
+    },
+    {
+      "sound": "sheep",
+      "x": 0.82,
+      "y": 0.38,
+      "r": 0.2
+    },
+    {
+      "sound": "duck",
+      "x": 0.8,
+      "y": 0.61,
+      "r": 0.12
     }
   ]
 }

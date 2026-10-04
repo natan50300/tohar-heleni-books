@@ -2,6 +2,7 @@ import '@fontsource/varela-round/hebrew-400.css';
 import '@fontsource/varela-round/latin-400.css';
 import './style.css';
 import { startMusic, stopMusic } from './music.js';
+import { playAnimal } from './sounds.js';
 
 const BASE = import.meta.env.BASE_URL;
 const app = document.getElementById('app');
@@ -171,8 +172,8 @@ async function openBook(id) {
   const size = Math.max(screen.width, screen.height) * (devicePixelRatio || 1) > 1000 ? 1600 : 800;
   const img = (name) => `${BASE}books/${id}/${name}-${size}.webp`;
   const pages = [
-    { cover: true, text: book.title, sub: book.subtitle, src: img('cover') },
-    ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)) })),
+    { cover: true, text: book.title, sub: book.subtitle, src: img('cover'), spots: book.coverSpots },
+    ...book.pages.map((p, i) => ({ text: p.text, src: img('p' + pad(i + 1)), spots: p.spots })),
   ];
   const last = pages.length; // index of the "the end" screen
 
@@ -291,6 +292,34 @@ async function openBook(id) {
     .then((lock) => (wakeLock = lock))
     .catch(() => {});
 
+  // Where a touch lands on the picture itself (0..1), allowing for the way wide screens crop it.
+  const onPicture = (clientX, clientY) => {
+    const w = innerWidth;
+    const h = innerHeight;
+    if (w / h > 1.5) {
+      const shown = w / 1.5;
+      return [clientX / w, (clientY + (shown - h) * 0.12) / shown];
+    }
+    const shown = h * 1.5;
+    return [(clientX + (shown - w) / 2) / shown, clientY / h];
+  };
+  // Animals answer when touched. Spots are {sound, x, y, r} in picture units; r is a share of the height.
+  const touchAnimal = (clientX, clientY) => {
+    const spots = pages[idx]?.spots;
+    if (!spots) return false;
+    const [x, y] = onPicture(clientX, clientY);
+    const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * 1.5, y - s.y) < s.r);
+    if (!hit) return false;
+    playAnimal(hit.sound);
+    const ring = document.createElement('span');
+    ring.className = 'ring';
+    ring.style.left = clientX + 'px';
+    ring.style.top = clientY + 'px';
+    root.append(ring);
+    setTimeout(() => ring.remove(), 700);
+    return true;
+  };
+
   let startX = null;
   let startY = 0;
   root.addEventListener('pointerdown', (e) => {
@@ -307,6 +336,7 @@ async function openBook(id) {
     if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
       go(dx > 0 ? 1 : -1); // swipe right = turn forward, like a Hebrew book
     } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+      if (!turning && touchAnimal(e.clientX, e.clientY)) return;
       const x = e.clientX / innerWidth;
       if (x < 0.3) go(1);
       else if (x > 0.7) go(-1);

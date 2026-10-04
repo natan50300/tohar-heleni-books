@@ -513,6 +513,29 @@ a {
   font-size: 17px;
 }
 
+.ring {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin: -45px 0 0 -45px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 244, 214, 0.9);
+  pointer-events: none;
+  z-index: 4;
+  animation: ring 650ms ease-out both;
+}
+
+@keyframes ring {
+  from {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 .install {
   display: block;
   margin: 28px auto 0;
