@@ -22,9 +22,14 @@ for (const name of pageNames(book)) {
     continue;
   }
   // The large file is named -1600 but keeps up to 1800px of the source, so wide pictures stay sharp on phones.
-  for (const [label, w] of [[1600, book.ratio ? 1800 : 1600], [800, 800]]) {
+  for (const [label, w] of [[1600, book.sharp ? 2400 : book.ratio ? 1800 : 1600], [800, 800]]) {
     const h = Math.round(w / ratio);
-    await sharp(src).resize(w, h, { fit: 'cover', withoutEnlargement: true }).webp({ quality: 88 }).toFile(`${BOOKS_DIR}/${id}/${name}-${label}.webp`);
+    // book.sharp: enlarge to phone resolution and sharpen lightly, so pages are not blurred by the browser's own scaling.
+    const big = book.sharp && label === 1600;
+    await sharp(src)
+      .resize(w, h, { fit: 'cover', withoutEnlargement: !big, kernel: 'lanczos3' })
+      .sharpen(big ? { sigma: 0.8 } : undefined)
+      .webp({ quality: big ? 90 : 88 }).toFile(`${BOOKS_DIR}/${id}/${name}-${label}.webp`);
   }
 }
 
