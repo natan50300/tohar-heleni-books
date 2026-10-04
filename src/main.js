@@ -179,7 +179,6 @@ async function openBook(id) {
   app.innerHTML = `
     <main class="reader" style="${paletteStyle(book.palette)}">
       <div class="stage"></div>
-      <div class="gutter"></div>
       <div class="band"></div>
       <div class="end" hidden>
         <p>לילה טוב 🌙</p>
