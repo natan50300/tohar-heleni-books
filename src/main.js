@@ -92,6 +92,7 @@ async function showLibrary() {
             }
             <span class="cover-title">${esc(b.title)}</span>
             <span class="badge">${FOR_LABEL[b.for] || ''}</span>
+            ${b.sounds ? '<span class="badge sound">🔊 נוגעים ושומעים</span>' : ''}
           </div>
         </a>`,
           )
@@ -184,6 +185,7 @@ async function openBook(id) {
       <div class="backdrop"></div>
       <div class="stage"></div>
       <div class="band"></div>
+      <div class="hint" hidden>👆 געו בחיה כדי לשמוע אותה</div>
       <div class="end" hidden>
         <p>לילה טוב 🌙</p>
         <div class="end-actions">
@@ -223,6 +225,7 @@ async function openBook(id) {
     root.classList.toggle('is-cover', !!p?.cover);
     band.innerHTML = p ? `${esc(p.text).replace(/\n/g, '<br>')}${p.sub ? `<small>${esc(p.sub)}</small>` : ''}` : '';
     endEl.hidden = i !== last;
+    root.querySelector('.hint').hidden = !p?.spots;
     backdrop.style.backgroundImage = p && book.hasArt ? `url("${p.src}")` : 'none';
     counter.textContent = i === 0 || i === last ? '' : `${i} / ${last - 1}`;
     prevBtn.disabled = i === 0;
