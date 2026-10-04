@@ -2,7 +2,7 @@ import '@fontsource/varela-round/hebrew-400.css';
 import '@fontsource/varela-round/latin-400.css';
 import './style.css';
 import { startMusic, stopMusic } from './music.js';
-import { playAnimal } from './sounds.js';
+import { playAnimal, prepareAnimals } from './sounds.js';
 
 const BASE = import.meta.env.BASE_URL;
 const app = document.getElementById('app');
@@ -149,6 +149,8 @@ function showHelp() {
       </ol>
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
+      <h2>קולות החיות</h2>
+      <p>הקלטות אמיתיות מ-Wikimedia Commons. פרה, כבשה וברווז: Secretlondon (CC BY-SA 3.0). כלב: Amada44 (CC BY-SA 3.0). חתול: Heismark. תרנגול ותרנגולת: alys. סוס: Hü. (נחלת הכלל).</p>
       <h2>בלי אינטרנט</h2>
       <p>ספר שנפתח פעם אחת נשמר בטלפון, ואפשר לקרוא בו גם בלי אינטרנט.</p>
     </main>`;
@@ -360,6 +362,7 @@ async function openBook(id) {
   syncMusic();
   immerse(); // works when the book was opened by a tap; otherwise the first touch does it
   if (book.hasArt) saveOffline(pages.map((p) => p.src));
+  prepareAnimals([...new Set(pages.flatMap((p) => (p.spots || []).map((s) => s.sound)))]);
 }
 
 // Keep every page of an opened book on the phone.
