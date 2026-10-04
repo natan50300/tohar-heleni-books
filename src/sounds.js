@@ -19,7 +19,7 @@ function load(name) {
   if (!buffers.has(name)) {
     buffers.set(
       name,
-      fetch(`${BASE}sounds/${name}.mp3`)
+      fetch(`${BASE}sounds/${name}.mp3?v=2`)
         .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error(name))))
         // Callback form: older iPhones do not return a promise here.
         .then((data) => new Promise((resolve, reject) => ctx.decodeAudioData(data, resolve, reject)))
