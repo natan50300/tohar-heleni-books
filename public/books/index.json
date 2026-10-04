@@ -96,5 +96,19 @@
     "hasArt": true,
     "rev": "muu877hp",
     "sounds": false
+  },
+  {
+    "id": "uga-lishtayim",
+    "order": 8,
+    "title": "עוגה לשתיים",
+    "subtitle": "טוהר והלני אופות עוגת תותים",
+    "for": "both",
+    "palette": {
+      "from": "#7a4a4a",
+      "to": "#f0d9b5"
+    },
+    "hasArt": true,
+    "rev": "muu9umyu",
+    "sounds": false
   }
 ]

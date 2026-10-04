@@ -6,8 +6,11 @@
   "ratio": 2,
   "sharp": true,
   "quiet": true,
-  "hasArt": false,
-  "palette": { "from": "#7a4a4a", "to": "#f0d9b5" },
+  "hasArt": true,
+  "palette": {
+    "from": "#7a4a4a",
+    "to": "#f0d9b5"
+  },
   "outfits": {
     "day": {
       "tohar": "a soft red-and-white gingham dress with a tiny cream apron, barefoot.",
@@ -21,17 +24,57 @@
   "coverOutfit": "day",
   "coverScene": "A cozy pastel kitchen. The two sisters stand and sit behind a low wooden table with a round strawberry cake on it, both smiling proudly, a little flour on their noses.",
   "pages": [
-    { "text": "במטבח יש קערה גדולה,\nטוהר והלני אופות עוגה.", "scene": "A cozy pastel kitchen. On a low wooden children's table stands a big cream mixing bowl. Heleni stands holding a wooden spoon up; Tohar sits on a small stool beside the table with both hands on the rim of the bowl, peeking in." },
-    { "text": "קמח לבן כמו ענן,\nפּוּף! על האף, על היד, על השולחן.", "scene": "A soft white cloud of flour puffs up from the bowl. Heleni laughs with flour on her nose and hands; Tohar has flour on her cheeks and looks at her white hands in surprise. Flour dust on the table." },
-    { "text": "ביצה אחת ועוד ביצה,\nהלני שוברת, טוהר מציצה.", "scene": "Heleni carefully cracks an egg over the mixing bowl, tongue between her lips in concentration. Tohar leans over from her stool and peeks into the bowl. Another egg waits on the table." },
-    { "text": "כף גדולה מסתובבת לה,\nסביב סביב, איזו בלילה!", "scene": "Heleni stirs the batter in the bowl with a big wooden spoon, using both hands. Tohar holds the bowl steady with both hands and watches the swirling batter, delighted." },
-    { "text": "טוהר טועמת עם אצבע קטנה,\nמממ... מתוק! עוד טעימה.", "scene": "Tohar licks a little batter from her finger, eyes closed in delight, a dab of batter on her chin. Heleni watches her and laughs, holding the dripping wooden spoon over the bowl." },
-    { "text": "תותים אדומים מעל הכל,\nאחד לעוגה ואחד לאכול.", "scene": "A round cake pan filled with batter on the table and a small bowl of red strawberries. Heleni places a strawberry on the batter; Tohar bites into a strawberry she holds with both hands, juice on her lips." },
-    { "text": "העוגה בתנור, מחכים, מחכים,\nדרך החלון הקטן מציצים.", "scene": "The two sisters sit side by side on the kitchen floor at a safe distance in front of a small pastel oven, looking at the warm glowing oven window where the cake is baking. Seen in three-quarter view from behind, faces turned a little toward each other." },
-    { "text": "ריח מתוק עולה באוויר,\nכל המטבח חמים ומאיר.", "scene": "Warm golden light fills the kitchen. Both sisters lift their noses and sniff the air with closed eyes and happy smiles; soft swirls of warm steam drift through the room. Heleni stands, Tohar sits on her stool." },
-    { "text": "דינג! העוגה מוכנה, זהובה ורכה,\nשתי אחיות מוחאות לה כף בשמחה.", "scene": "The finished round golden cake topped with strawberries stands on the low table on a pastel cake stand. Both sisters clap their hands and cheer, looking at it with shining eyes." },
-    { "text": "פרוסה לך ופרוסה לי,\nפירורים על הלחי ועל האף שלי.", "scene": "The two sisters sit at the low table, each with a small plate and a slice of strawberry cake. Heleni takes a big bite; Tohar holds a piece in both hands, crumbs on her cheeks and nose. The cake with two slices missing stands between them." },
-    { "outfit": "night", "text": "ידיים נקיות, פיג'מה רכה,\nבטן מלאה ועין עייפה.", "scene": "Evening in the bedroom, warm lamp light. The two sisters in their pajamas sit on a bed leaning on each other; Heleni yawns with a hand over her mouth, Tohar rubs her eye and rests a hand on her round tummy." },
-    { "outfit": "night", "sleep": true, "text": "חלומות מתוקים כמו עוגת תותים,\nלילה טוב, טוהר והלני, חיבוקים.", "scene": "Night. The two sisters are fast asleep side by side in the bed under a soft blanket, peaceful faces, eyes closed, Heleni's arm around Tohar. A soft moon in the window, the room dim dusty blue with a faint warm glow." }
-  ]
+    {
+      "text": "במטבח יש קערה גדולה,\nטוהר והלני אופות עוגה.",
+      "scene": "A cozy pastel kitchen. On a low wooden children's table stands a big cream mixing bowl. Heleni stands holding a wooden spoon up; Tohar sits on a small stool beside the table with both hands on the rim of the bowl, peeking in."
+    },
+    {
+      "text": "קמח לבן כמו ענן,\nפּוּף! על האף, על היד, על השולחן.",
+      "scene": "A soft white cloud of flour puffs up from the bowl. Heleni laughs with flour on her nose and hands; Tohar has flour on her cheeks and looks at her white hands in surprise. Flour dust on the table."
+    },
+    {
+      "text": "ביצה אחת ועוד ביצה,\nהלני שוברת, טוהר מציצה.",
+      "scene": "Heleni carefully cracks an egg over the mixing bowl, tongue between her lips in concentration. Tohar leans over from her stool and peeks into the bowl. Another egg waits on the table."
+    },
+    {
+      "text": "כף גדולה מסתובבת לה,\nסביב סביב, איזו בלילה!",
+      "scene": "Heleni stirs the batter in the bowl with a big wooden spoon, using both hands. Tohar holds the bowl steady with both hands and watches the swirling batter, delighted."
+    },
+    {
+      "text": "טוהר טועמת עם אצבע קטנה,\nמממ... מתוק! עוד טעימה.",
+      "scene": "Tohar licks a little batter from her finger, eyes closed in delight, a dab of batter on her chin. Heleni watches her and laughs, holding the dripping wooden spoon over the bowl."
+    },
+    {
+      "text": "תותים אדומים מעל הכל,\nאחד לעוגה ואחד לאכול.",
+      "scene": "A round cake pan filled with batter on the table and a small bowl of red strawberries. Heleni places a strawberry on the batter; Tohar bites into a strawberry she holds with both hands, juice on her lips."
+    },
+    {
+      "text": "העוגה בתנור, מחכים, מחכים,\nדרך החלון הקטן מציצים.",
+      "scene": "The two sisters sit side by side on the kitchen floor at a safe distance in front of a small pastel oven, looking at the warm glowing oven window where the cake is baking. Seen in three-quarter view from behind, faces turned a little toward each other."
+    },
+    {
+      "text": "ריח מתוק עולה באוויר,\nכל המטבח חמים ומאיר.",
+      "scene": "Warm golden light fills the kitchen. Both sisters lift their noses and sniff the air with closed eyes and happy smiles; soft swirls of warm steam drift through the room. Heleni stands, Tohar sits on her stool."
+    },
+    {
+      "text": "דינג! העוגה מוכנה, זהובה ורכה,\nשתי אחיות מוחאות לה כף בשמחה.",
+      "scene": "The finished round golden cake topped with strawberries stands on the low table on a pastel cake stand. Both sisters clap their hands and cheer, looking at it with shining eyes."
+    },
+    {
+      "text": "פרוסה לך ופרוסה לי,\nפירורים על הלחי ועל האף שלי.",
+      "scene": "The two sisters sit at the low table, each with a small plate and a slice of strawberry cake. Heleni takes a big bite; Tohar holds a piece in both hands, crumbs on her cheeks and nose. The cake with two slices missing stands between them."
+    },
+    {
+      "outfit": "night",
+      "text": "ידיים נקיות, פיג'מה רכה,\nבטן מלאה ועין עייפה.",
+      "scene": "Evening in the bedroom, warm lamp light. The two sisters in their pajamas sit on a bed leaning on each other; Heleni yawns with a hand over her mouth, Tohar rubs her eye and rests a hand on her round tummy."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "חלומות מתוקים כמו עוגת תותים,\nלילה טוב, טוהר והלני, חיבוקים.",
+      "scene": "Night. The two sisters are fast asleep side by side in the bed under a soft blanket, peaceful faces, eyes closed, Heleni's arm around Tohar. A soft moon in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muu9umyu"
 }
