@@ -29,7 +29,8 @@ async function put(req, res) {
 
 async function networkFirst(req) {
   try {
-    return await put(req, await fetch(req));
+    // Skip the browser's own 10-minute copy, so a new version shows up at once.
+    return await put(req, await fetch(req.url, { cache: 'no-store' }));
   } catch {
     return (await caches.match(req)) || (await caches.match(SCOPE)) || Response.error();
   }

@@ -389,8 +389,25 @@ function route() {
   scrollTo(0, 0);
 }
 
-addEventListener('hashchange', route);
+// A phone keeps the app open for days. When a newer version is online, load it (never in the middle of a book).
+async function checkForUpdate() {
+  if (!import.meta.env.PROD || document.body.dataset.view === 'reader') return;
+  try {
+    const { build } = await fetch(BASE + 'version.json', { cache: 'no-store' }).then((r) => r.json());
+    if (build === __BUILD__ || sessionStorage.getItem('reloaded') === build) return;
+    sessionStorage.setItem('reloaded', build);
+    await fetch(location.origin + BASE, { cache: 'reload' }).catch(() => {});
+    location.reload();
+  } catch {}
+}
+
+addEventListener('hashchange', () => {
+  route();
+  checkForUpdate();
+});
+document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && checkForUpdate());
 route();
+checkForUpdate();
 
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).then(async () => {
