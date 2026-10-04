@@ -232,8 +232,8 @@ a {
   /* The whole picture is always shown (3:2), as large as the screen allows. */
   --ratio: 1.5;
   --h: min(100dvh, calc(100vw / var(--ratio)));
-  /* A screen slightly wider than the picture is filled completely: up to 12% is trimmed off the top and bottom. */
-  --w: min(100vw, calc(var(--h) * var(--ratio) * 1.12));
+  /* A screen slightly wider than the picture is filled completely: up to 23% is trimmed off the top and bottom. */
+  --w: min(100vw, calc(var(--h) * var(--ratio) * 1.3));
   --side: calc((100vw - var(--w)) / 2);
 }
 
