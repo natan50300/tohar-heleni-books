@@ -151,7 +151,7 @@ function showHelp() {
       <h2>אם אין מנגינה באייפון</h2>
       <p>בודקים שהמתג השקט בצד הטלפון לא מופעל ושהווליום פתוח.</p>
       <h2>קולות החיות</h2>
-      <p>הקלטות אמיתיות מ-Wikimedia Commons. פרה, כבשה וברווז: Secretlondon (CC BY-SA 3.0). כלב: Amada44 (CC BY-SA 3.0). חתול: Heismark. תרנגול ותרנגולת: alys (נחלת הכלל). סוס: Briefer, Maigrot, Mandel ואחרים (CC BY 4.0). צחוק: lmbubec (CC0), morgantj ו-reinsamba (CC BY 3.0). צפרדע: MichaeltheFox8621 (CC BY-SA 4.0). גשם: ジダネ (נחלת הכלל). שכשוך מים: tamanders (נחלת הכלל). גלי ים: L. Ginzkey (CC BY 2.5). שחף: avphillips (נחלת הכלל).</p>
+      <p>הקלטות אמיתיות מ-Wikimedia Commons. פרה, כבשה וברווז: Secretlondon (CC BY-SA 3.0). כלב: Amada44 (CC BY-SA 3.0). חתול: Heismark. תרנגול ותרנגולת: alys (נחלת הכלל). סוס: Briefer, Maigrot, Mandel ואחרים (CC BY 4.0). צחוק: lmbubec (CC0), morgantj ו-reinsamba (CC BY 3.0). צפרדע: MichaeltheFox8621 (CC BY-SA 4.0). גשם: ジダネ (נחלת הכלל). שכשוך מים וגלי ים: נוצרו ב-Suno. שחף: avphillips (נחלת הכלל).</p>
       <h2>בלי אינטרנט</h2>
       <p>ספר שנפתח פעם אחת נשמר בטלפון, ואפשר לקרוא בו גם בלי אינטרנט.</p>
     </main>`;
