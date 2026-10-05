@@ -1,0 +1,80 @@
+{
+  "order": 5,
+  "title": "הבלון של טוהר",
+  "subtitle": "בלון אדום אחד וטיול קטן",
+  "for": "tohar",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#7a3b3f",
+    "to": "#d9b98a"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft sage-green cotton dress with a small white round collar, cream tights, barefoot."
+    },
+    "night": {
+      "tohar": "light-blue footed pajamas with tiny white stars."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Tohar sits on soft green grass in a quiet sunny garden, looking up and laughing at one round red balloon floating above her on a thin string that she holds in her small hand. Soft blue sky, a few flowers, a low hedge behind her.",
+  "pages": [
+    {
+      "outfit": "night",
+      "text": "טוהר מתעוררת, ומה היא רואה?\nבלון אדום, איזו הפתעה!",
+      "scene": "Morning in Tohar's cozy bedroom, soft sunlight through a window. Tohar stands in her wooden cot holding the rail with both hands, hair a little messy, eyes wide with surprise, looking at one round red balloon floating beside the cot."
+    },
+    {
+      "text": "חוט קטן קשור ליד,\nהבלון איתה, הוא לא לבד.",
+      "scene": "Tohar sits on a soft rug in her bedroom, now dressed for the day. A thin string is loosely tied around her wrist and the red balloon floats above her. She looks up at it and smiles proudly, lifting her arm."
+    },
+    {
+      "text": "יוצאים לגינה ביום בהיר,\nהבלון רוקד לו באוויר.",
+      "scene": "A bright garden with green grass, flowers and a small tree. Tohar sits in a low wooden wagon lined with a blanket, holding the balloon string; the red balloon sways and dances high in the clear sky above her."
+    },
+    {
+      "text": "פרפר צהוב בא לבקר,\nנוגע בבלון וממהר.",
+      "scene": "Tohar sits on the grass in the garden holding the string. A small yellow butterfly flutters right next to the red balloon above her. Tohar points up at it with one finger, mouth open in delight."
+    },
+    {
+      "text": "ציפור קטנה על הענף,\nמביטה בבלון שעף ועף.",
+      "scene": "A small round brown bird sits on a low tree branch, tilting its head and looking curiously at the red balloon floating beside it. Below, Tohar stands holding the tree trunk with one hand for support and the string in the other, looking up."
+    },
+    {
+      "text": "טוהר יושבת על הדשא הרך,\nהבלון מעליה, אדום כל כך.",
+      "scene": "Wide calm view of the garden lawn. Tohar sits in the middle of the soft grass among a few daisies, the red balloon straight above her against the blue sky, casting a soft round shadow. She hugs her knees and looks up happily."
+    },
+    {
+      "text": "רוח קלה באה פתאום,\nהבלון מתנדנד, שלום שלום!",
+      "scene": "A gentle breeze blows through the garden: grass, leaves and Tohar's fine hair lean to one side, and the red balloon tilts sideways on its string. Tohar holds the string with both hands and laughs."
+    },
+    {
+      "text": "חתול אפור מציץ מהשיח,\nרואה את הבלון ומיד מריח.",
+      "scene": "A friendly fluffy grey cat peeks out from a green bush and stretches its nose up to sniff the red balloon, which floats low. Tohar sits beside it on the grass, watching the cat with wide amused eyes."
+    },
+    {
+      "text": "השמש יורדת, השמיים ורודים,\nהביתה חוזרים, עייפים ושמחים.",
+      "scene": "Sunset, pink and orange sky over the garden. Tohar sits in the low wooden wagon on the garden path heading toward a small house with a warm lit window, holding the balloon string, eyes a little sleepy, smiling."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה עם כוכבים,\nהבלון מחכה, הם חברים טובים.",
+      "scene": "Evening in the bedroom, warm lamp light. Tohar sits on the rug in her pajamas, hugging the red balloon with both arms, her cheek pressed against it, content and sleepy."
+    },
+    {
+      "outfit": "night",
+      "text": "הבלון ליד המיטה נקשר,\nהוא נשאר איתה עד מחר.",
+      "scene": "The red balloon is tied by its string to the rail of the wooden cot and floats just above it. Tohar lies in the cot under a soft blanket, awake but drowsy, looking up at the balloon with half-closed eyes. Dim warm night-light."
+    },
+    {
+      "outfit": "night",
+      "text": "לילה טוב, בלון. לילה טוב, ירח.\nטוהר ישנה, והלב שמח.",
+      "scene": "Night. Tohar is fast asleep in her cot, peaceful face, eyes closed, one small hand resting near the balloon string. The red balloon floats quietly above the cot, and a soft full moon shines through the window. The room is dim dusty blue with a faint warm glow.",
+      "sleep": true
+    }
+  ],
+  "rev": "muu1da60"
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "laila-tov",
+    "order": 1,
+    "title": "לילה טוב, טוהר והלני",
+    "subtitle": "ספר רגוע לפני השינה",
+    "for": "both",
+    "palette": {
+      "from": "#2c3558",
+      "to": "#7d6a8c"
+    },
+    "hasArt": true,
+    "rev": "mutzpm9g",
+    "sounds": false
+  },
+  {
+    "id": "tohar-bahava",
+    "order": 2,
+    "title": "טוהר בחווה",
+    "subtitle": "געו בחיה כדי לשמוע את הקול שלה",
+    "for": "tohar",
+    "palette": {
+      "from": "#3c5a4a",
+      "to": "#b08d57"
+    },
+    "hasArt": true,
+    "rev": "mutzpvm5",
+    "sounds": true
+  },
+  {
+    "id": "heleni-vehageshem",
+    "order": 3,
+    "title": "הלני והגשם",
+    "subtitle": "טיף טף, שלוליות וקשת בענן",
+    "for": "heleni",
+    "palette": {
+      "from": "#3f5673",
+      "to": "#c9a94e"
+    },
+    "hasArt": true,
+    "rev": "mutzq56b",
+    "sounds": true
+  },
+  {
+    "id": "yom-bayam",
+    "order": 4,
+    "title": "טוהר והלני בים",
+    "subtitle": "גלים, חול ושחף אחד",
+    "for": "both",
+    "palette": {
+      "from": "#2f6f8a",
+      "to": "#e0b77a"
+    },
+    "hasArt": true,
+    "rev": "mutzqd10",
+    "sounds": true
+  },
+  {
+    "id": "habalon-shel-tohar",
+    "order": 5,
+    "title": "הבלון של טוהר",
+    "subtitle": "בלון אדום אחד וטיול קטן",
+    "for": "tohar",
+    "palette": {
+      "from": "#7a3b3f",
+      "to": "#d9b98a"
+    },
+    "hasArt": true,
+    "rev": "muu1da60",
+    "sounds": false
+  },
+  {
+    "id": "hadubi-shel-heleni",
+    "order": 6,
+    "title": "הדובי של הלני",
+    "subtitle": "יום שלם עם החבר הכי רך",
+    "for": "heleni",
+    "palette": {
+      "from": "#6b4a3a",
+      "to": "#e3b9a0"
+    },
+    "hasArt": true,
+    "rev": "muu4wbvv",
+    "sounds": false
+  },
+  {
+    "id": "gan-shaashuim",
+    "order": 7,
+    "title": "טוהר והלני בגן השעשועים",
+    "subtitle": "נדנדה, מגלשה וארגז חול",
+    "for": "both",
+    "palette": {
+      "from": "#3f6a5a",
+      "to": "#e2c27a"
+    },
+    "hasArt": true,
+    "rev": "muu877hp",
+    "sounds": false
+  },
+  {
+    "id": "uga-lishtayim",
+    "order": 8,
+    "title": "עוגה לשתיים",
+    "subtitle": "טוהר והלני אופות עוגת תותים",
+    "for": "both",
+    "palette": {
+      "from": "#7a4a4a",
+      "to": "#f0d9b5"
+    },
+    "hasArt": true,
+    "rev": "muu9umyu",
+    "sounds": false
+  },
+  {
+    "id": "eifo-hagerev",
+    "order": 9,
+    "title": "איפה הגרב של טוהר?",
+    "subtitle": "גרב אחת הלכה לאיבוד",
+    "for": "tohar",
+    "palette": {
+      "from": "#5a5f7a",
+      "to": "#e8c98a"
+    },
+    "hasArt": true,
+    "rev": "muum9b15",
+    "sounds": false
+  },
+  {
+    "id": "heleni-vehatzvaim",
+    "order": 10,
+    "title": "הלני והצבעים",
+    "subtitle": "אדום, צהוב, כחול וירוק",
+    "for": "heleni",
+    "palette": {
+      "from": "#3d5f7a",
+      "to": "#f0c46a"
+    },
+    "hasArt": true,
+    "rev": "muuna7gu",
+    "sounds": false
+  },
+  {
+    "id": "gan-hachayot",
+    "order": 11,
+    "title": "טוהר והלני בגן החיות",
+    "subtitle": "פיל, ג'ירפה וקוף אחד שובב",
+    "for": "both",
+    "palette": {
+      "from": "#5b6b3a",
+      "to": "#e6c88a"
+    },
+    "hasArt": true,
+    "rev": "muuxxmdw",
+    "sounds": true
+  },
+  {
+    "id": "harakevet",
+    "order": 12,
+    "title": "הרכבת של טוהר והלני",
+    "subtitle": "טוּ-טוּ! רכבת מקרטון",
+    "for": "both",
+    "palette": {
+      "from": "#34496b",
+      "to": "#e5b97c"
+    },
+    "hasArt": true,
+    "rev": "muuz6p0k",
+    "sounds": true
+  },
+  {
+    "id": "heleni-vehaodem",
+    "order": 13,
+    "title": "הלני והאודם",
+    "subtitle": "אודם אדום אחד והרבה צחוק",
+    "for": "heleni",
+    "palette": {
+      "from": "#7a3550",
+      "to": "#f2c9b8"
+    },
+    "hasArt": true,
+    "rev": "muv327xm",
+    "sounds": false
+  }
+]

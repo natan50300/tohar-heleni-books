@@ -1,0 +1,78 @@
+{
+  "order": 9,
+  "title": "איפה הגרב של טוהר?",
+  "subtitle": "גרב אחת הלכה לאיבוד",
+  "for": "tohar",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#5a5f7a",
+    "to": "#e8c98a"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft buttercup-yellow knitted sweater with a small white collar and grey-blue leggings; one small cream sock with tiny red hearts on one foot, the other foot bare."
+    },
+    "night": {
+      "tohar": "lilac pajamas with tiny white clouds and both cream heart socks on."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Tohar sits on a soft rug in her cozy bedroom, holding up one bare foot with both hands and looking at it with a puzzled, funny face; her other foot wears a small cream sock with tiny red hearts.",
+  "pages": [
+    {
+      "text": "גרב אחת על הרגל הקטנה,\nואיפה השנייה? אין לה תשובה.",
+      "scene": "Tohar sits on the rug in her bedroom, pointing at her one socked foot and looking around the room with wide questioning eyes, her other foot bare."
+    },
+    {
+      "text": "אולי מתחת למיטה?\nלא! שם רק נעל אחת קטנה.",
+      "scene": "Tohar lies on her tummy on the floor, peeking under a low wooden bed. Under the bed there is only one tiny cream baby shoe. She looks surprised."
+    },
+    {
+      "text": "אולי בתוך הסל הגדול?\nלא! שם דובי, כדור וצעצוע כחול.",
+      "scene": "Tohar stands holding the rim of a big woven toy basket and peeks inside. In the basket: a teddy bear, a ball and a blue wooden toy. No sock."
+    },
+    {
+      "text": "אולי מאחורי הווילון?\nלא! שם רק שמש וחלון.",
+      "scene": "Tohar pulls a soft cream curtain aside with one hand and peeks behind it. Behind the curtain is only a sunny window with warm light pouring in on her face."
+    },
+    {
+      "text": "אולי בקופסה עם המכסה?\nלא! שם קוביות, הרבה, הרבה.",
+      "scene": "Tohar sits on the rug and lifts the lid of a pastel box. Inside are many colorful wooden blocks, a few spilling out. She looks into the box with her mouth open."
+    },
+    {
+      "text": "אולי מתחת לכרית?\nלא! שם ספר עם ציפור כחלחלית.",
+      "scene": "Tohar lifts a big soft cushion on the floor with both hands. Under it lies a small picture book with a light-blue bird painted on its cover, no letters. She looks at it curiously."
+    },
+    {
+      "text": "טוהר זוחלת, מחפשת, חושבת,\nאיפה הגרב? היא לא מוותרת.",
+      "scene": "Tohar crawls across the bedroom rug on hands and knees with a determined little face, looking ahead, one sock on and one bare foot visible behind her."
+    },
+    {
+      "text": "רגע, מי שם ישן בפינה?\nחתלתול קטן, ולו יש מתנה.",
+      "scene": "In a sunny corner of the room a small fluffy ginger kitten with white paws sleeps curled up on the floor. Tohar sits a little way off, pointing at it with a delighted surprised face. A tiny bit of cream fabric peeks out from under the kitten."
+    },
+    {
+      "text": "הנה הגרב! מתחת לחתול,\nחמה ורכה, איזה מזל גדול!",
+      "scene": "The ginger kitten stretches and stands up, and under it lies the small cream sock with tiny red hearts. Tohar holds the sock up high in one hand, laughing with joy; the kitten looks at her."
+    },
+    {
+      "text": "גרב ועוד גרב, שתיים ביחד,\nטוהר שמחה, אף אחת לא לבד.",
+      "scene": "Tohar sits on the rug with both feet stretched forward, now wearing both cream heart socks, wiggling her toes and clapping. The ginger kitten sits beside her feet."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה ושמיכה חמה,\nהחתלתול מגרגר לה מנגינה.",
+      "scene": "Evening, warm lamp light. Tohar in her pajamas lies in her wooden cot under a soft blanket, drowsy and smiling. The ginger kitten is curled up on the blanket near her feet, purring with closed eyes."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "לילה טוב, גרביים. לילה טוב, חתול.\nטוהר ישנה, והלילה כחול.",
+      "scene": "Night. Tohar is fast asleep in her cot, peaceful face, eyes closed, her two socked feet peeking out from under the blanket. The ginger kitten sleeps curled up beside her. A soft moon in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muum9b15"
+}
