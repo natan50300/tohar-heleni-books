@@ -151,6 +151,20 @@
     },
     "hasArt": true,
     "rev": "muuxxmdw",
+    "sounds": true
+  },
+  {
+    "id": "harakevet",
+    "order": 12,
+    "title": "הרכבת של טוהר והלני",
+    "subtitle": "טוּ-טוּ! רכבת מקרטון",
+    "for": "both",
+    "palette": {
+      "from": "#34496b",
+      "to": "#e5b97c"
+    },
+    "hasArt": true,
+    "rev": "muuz6p0k",
     "sounds": false
   }
 ]
