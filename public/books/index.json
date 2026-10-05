@@ -165,6 +165,20 @@
     },
     "hasArt": true,
     "rev": "muuz6p0k",
+    "sounds": true
+  },
+  {
+    "id": "heleni-vehaodem",
+    "order": 13,
+    "title": "הלני והאודם",
+    "subtitle": "אודם אדום אחד והרבה צחוק",
+    "for": "heleni",
+    "palette": {
+      "from": "#7a3550",
+      "to": "#f2c9b8"
+    },
+    "hasArt": true,
+    "rev": "muv327xm",
     "sounds": false
   }
 ]
