@@ -1,0 +1,80 @@
+{
+  "order": 11,
+  "title": "טוהר והלני בגן החיות",
+  "subtitle": "פיל, ג'ירפה וקוף אחד שובב",
+  "for": "both",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#5b6b3a",
+    "to": "#e6c88a"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft olive-green romper with a cream collar, a tiny cream sun hat and cream shoes.",
+      "heleni": "a sand-beige dress with a rust-red belt, a small straw hat with a red ribbon and tan sandals."
+    },
+    "night": {
+      "tohar": "cream pajamas with tiny giraffes.",
+      "heleni": "soft orange pajamas with tiny elephants."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "The entrance of a small friendly zoo with a wooden arch covered in green leaves and no sign. Heleni stands pointing ahead excitedly; Tohar sits in a low wooden wagon beside her, clapping. Behind them a giraffe's head peeks over the trees.",
+  "pages": [
+    {
+      "text": "היום יוצאים לטיול מיוחד,\nלגן החיות, כולם ביחד!",
+      "scene": "Morning. Heleni pulls a low wooden wagon with Tohar sitting in it along a path through the leafy wooden entrance arch of a small friendly zoo. Both look ahead with excited faces."
+    },
+    {
+      "text": "פיל גדול עם חדק ארוך,\nמתיז מים, איזה חיוך!",
+      "scene": "A big gentle grey elephant behind a low wooden fence sprays a soft arc of water from its trunk into the air. The two sisters watch from a safe distance on the path, Heleni laughing with her arms up, Tohar in the wagon pointing."
+    },
+    {
+      "text": "ג'ירפה גבוהה עד השמיים,\nאוכלת עלים, לאט, בינתיים.",
+      "scene": "A tall friendly giraffe bends its long neck to eat leaves from a high tree. The two sisters stand and sit far below on the path, tilting their heads all the way back to look up at it, Heleni holding her hat."
+    },
+    {
+      "text": "קוף קטן קופץ מענף,\nעושה פרצוף ורץ, הופ, עף!",
+      "scene": "A small playful brown monkey hangs from a tree branch by one arm and makes a funny face. Heleni makes a funny face back at it; Tohar in the wagon laughs with her mouth wide open."
+    },
+    {
+      "text": "אריה זהוב שוכב בשמש,\nמפהק פיהוק גדול ממש.",
+      "scene": "A calm golden lion with a fluffy mane lies on a sunny rock far behind a fence, in the middle of a big sleepy yawn. In the foreground the two sisters yawn too, copying it, Heleni with her hand over her mouth."
+    },
+    {
+      "text": "זברה, זברה, פסים פסים,\nשחור ולבן, כמה יפים!",
+      "scene": "Two friendly zebras stand in a green paddock behind a low wooden fence, their black and white stripes clear. Heleni points at the stripes; Tohar holds the fence rail with both hands, standing, and looks through it."
+    },
+    {
+      "text": "פינגווינים הולכים בשורה,\nטיף טף, טיף טף, כמו במסיבה.",
+      "scene": "Five small penguins waddle in a neat line beside a little blue pool. Heleni waddles along the path in the same pose with her arms at her sides, giggling; Tohar sits in the wagon watching the penguins."
+    },
+    {
+      "text": "תוכי צבעוני על המקל,\nאדום, כחול, ירוק, הוא מסתכל.",
+      "scene": "A colorful parrot with red, blue and green feathers sits on a wooden perch and tilts its head, looking at the sisters. The two sisters look up at it, Tohar reaching one hand toward it from the wagon, Heleni with her hands on her cheeks."
+    },
+    {
+      "text": "צב זקן הולך לאט,\nצעד ועוד צעד, כמעט, כמעט.",
+      "scene": "A big old tortoise walks very slowly across the grass. Heleni crouches down next to the low fence to watch it closely; Tohar sits on the grass beside her, leaning forward with wide eyes."
+    },
+    {
+      "text": "להתראות, פיל! להתראות, קוף!\nהיום נגמר, והיה כל כך טוב.",
+      "scene": "Late afternoon, golden light. Heleni pulls the wagon with Tohar toward the leafy exit arch; both turn back and wave goodbye. Far behind them the elephant lifts its trunk and the monkey waves from its tree."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה עם ג'ירפה, פיג'מה עם פיל,\nשתי אחיות במיטה, והלילה מתחיל.",
+      "scene": "Evening in the bedroom, warm lamp light. The two sisters sit side by side in a bed in their pajamas, under one blanket up to their tummies. Heleni holds a small plush elephant, Tohar holds a small plush giraffe, both sleepy and smiling."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "לילה טוב, חיות. לילה טוב, גן.\nטוהר והלני חולמות על כולן.",
+      "scene": "Night. The two sisters are fast asleep side by side in the bed, peaceful faces, eyes closed, the plush elephant and giraffe between them. A soft moon in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muuxxmdw"
+}

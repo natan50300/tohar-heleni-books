@@ -138,5 +138,19 @@
     "hasArt": true,
     "rev": "muuna7gu",
     "sounds": false
+  },
+  {
+    "id": "gan-hachayot",
+    "order": 11,
+    "title": "טוהר והלני בגן החיות",
+    "subtitle": "פיל, ג'ירפה וקוף אחד שובב",
+    "for": "both",
+    "palette": {
+      "from": "#5b6b3a",
+      "to": "#e6c88a"
+    },
+    "hasArt": true,
+    "rev": "muuxxmdw",
+    "sounds": false
   }
 ]
