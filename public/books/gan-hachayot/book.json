@@ -30,7 +30,15 @@
     },
     {
       "text": "פיל גדול עם חדק ארוך,\nמתיז מים, איזה חיוך!",
-      "scene": "A big gentle grey elephant behind a low wooden fence sprays a soft arc of water from its trunk into the air. The two sisters watch from a safe distance on the path, Heleni laughing with her arms up, Tohar in the wagon pointing."
+      "scene": "A big gentle grey elephant behind a low wooden fence sprays a soft arc of water from its trunk into the air. The two sisters watch from a safe distance on the path, Heleni laughing with her arms up, Tohar in the wagon pointing.",
+      "spots": [
+        {
+          "sound": "elephant",
+          "x": 0.82,
+          "y": 0.38,
+          "r": 0.24
+        }
+      ]
     },
     {
       "text": "ג'ירפה גבוהה עד השמיים,\nאוכלת עלים, לאט, בינתיים.",
@@ -62,11 +70,27 @@
     },
     {
       "text": "זברה, זברה, פסים פסים,\nשחור ולבן, כמה יפים!",
-      "scene": "Two friendly zebras stand in a green paddock behind a low wooden fence, their black and white stripes clear. Heleni points at the stripes; Tohar holds the fence rail with both hands, standing, and looks through it."
+      "scene": "Two friendly zebras stand in a green paddock behind a low wooden fence, their black and white stripes clear. Heleni points at the stripes; Tohar holds the fence rail with both hands, standing, and looks through it.",
+      "spots": [
+        {
+          "sound": "zebra",
+          "x": 0.75,
+          "y": 0.3,
+          "r": 0.26
+        }
+      ]
     },
     {
       "text": "פינגווינים הולכים בשורה,\nטיף טף, טיף טף, כמו במסיבה.",
-      "scene": "Five small penguins waddle in a neat line beside a little blue pool. Heleni waddles along the path in the same pose with her arms at her sides, giggling; Tohar sits in the wagon watching the penguins."
+      "scene": "Five small penguins waddle in a neat line beside a little blue pool. Heleni waddles along the path in the same pose with her arms at her sides, giggling; Tohar sits in the wagon watching the penguins.",
+      "spots": [
+        {
+          "sound": "penguin",
+          "x": 0.74,
+          "y": 0.37,
+          "r": 0.24
+        }
+      ]
     },
     {
       "text": "תוכי צבעוני על המקל,\nאדום, כחול, ירוק, הוא מסתכל.",
@@ -92,7 +116,13 @@
           "sound": "monkey",
           "x": 0.91,
           "y": 0.13,
-          "r": 0.12
+          "r": 0.1
+        },
+        {
+          "sound": "elephant",
+          "x": 0.8,
+          "y": 0.27,
+          "r": 0.15
         }
       ]
     },
@@ -109,5 +139,5 @@
     }
   ],
   "rev": "muuxxmdw",
-  "hint": "געו בבנות, בקוף, באריה ובתוכי · מנגינה: כפתור ♪ למעלה מימין"
+  "hint": "געו בבנות ובחיות · מנגינה: כפתור ♪ למעלה מימין"
 }
