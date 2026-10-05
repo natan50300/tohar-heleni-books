@@ -110,5 +110,19 @@
     "hasArt": true,
     "rev": "muu9umyu",
     "sounds": false
+  },
+  {
+    "id": "eifo-hagerev",
+    "order": 9,
+    "title": "איפה הגרב של טוהר?",
+    "subtitle": "גרב אחת הלכה לאיבוד",
+    "for": "tohar",
+    "palette": {
+      "from": "#5a5f7a",
+      "to": "#e8c98a"
+    },
+    "hasArt": true,
+    "rev": "muum9b15",
+    "sounds": false
   }
 ]
