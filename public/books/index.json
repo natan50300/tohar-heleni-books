@@ -124,5 +124,19 @@
     "hasArt": true,
     "rev": "muum9b15",
     "sounds": false
+  },
+  {
+    "id": "heleni-vehatzvaim",
+    "order": 10,
+    "title": "הלני והצבעים",
+    "subtitle": "אדום, צהוב, כחול וירוק",
+    "for": "heleni",
+    "palette": {
+      "from": "#3d5f7a",
+      "to": "#f0c46a"
+    },
+    "hasArt": true,
+    "rev": "muuna7gu",
+    "sounds": false
   }
 ]
