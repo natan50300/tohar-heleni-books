@@ -208,5 +208,19 @@
     "hasArt": true,
     "rev": "mv3qsadz",
     "sounds": false
+  },
+  {
+    "id": "haperach",
+    "order": 16,
+    "title": "הפרח של טוהר והלני",
+    "subtitle": "זרע קטן אחד בעציץ",
+    "for": "both",
+    "palette": {
+      "from": "#4f6b3f",
+      "to": "#f1cf7a"
+    },
+    "hasArt": true,
+    "rev": "mv3roku4",
+    "sounds": false
   }
 ]

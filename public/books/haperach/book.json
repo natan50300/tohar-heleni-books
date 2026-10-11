@@ -6,8 +6,11 @@
   "ratio": 2,
   "sharp": true,
   "quiet": true,
-  "hasArt": false,
-  "palette": { "from": "#4f6b3f", "to": "#f1cf7a" },
+  "hasArt": true,
+  "palette": {
+    "from": "#4f6b3f",
+    "to": "#f1cf7a"
+  },
   "outfits": {
     "day": {
       "tohar": "soft denim-blue dungarees over a cream top and tiny green rubber boots.",
@@ -21,17 +24,56 @@
   "coverOutfit": "day",
   "coverScene": "A sunny garden corner. The two sisters sit on the grass on either side of a terracotta flowerpot with one cheerful yellow flower growing in it, both looking at the flower and smiling proudly. A small green watering can stands beside them.",
   "pages": [
-    { "text": "עציץ קטן ואדמה חומה,\nטוהר והלני שותלות בגינה.", "scene": "A sunny garden corner. An empty terracotta flowerpot and a small pile of brown soil on the grass. Heleni kneels beside the pot holding a small wooden trowel; Tohar sits next to her patting the pot with both hands." },
-    { "text": "הלני חופרת גומה קטנה,\nטוהר נוגעת באדמה, כמה נעימה!", "scene": "The flowerpot is now filled with brown soil. Heleni makes a small hole in the soil with her finger, concentrating. Tohar presses her open hand into a little pile of soil on the grass and looks at her soil-dusted palm with delight." },
-    { "text": "זרע קטן, עגול וחום,\nהולך לישון באדמה היום.", "scene": "Close view. Heleni holds one small round brown seed between two fingers above the little hole in the soil of the flowerpot. Tohar leans in very close, looking at the tiny seed with huge curious eyes." },
-    { "text": "מכסים אותו בשמיכה של חול,\nלילה טוב, זרע, תגדל גדול.", "scene": "The two sisters gently pat the soil flat in the flowerpot with their hands, Heleni with both hands and Tohar with one. Heleni whispers toward the soil with a tender smile." },
-    { "text": "משפך ירוק, טיף טיף טיף,\nמים לזרע, כמה כיף.", "scene": "Heleni holds a small green watering can with both hands and pours a gentle shower of water drops onto the soil in the flowerpot. Tohar claps her hands, a few drops sparkling in the sunlight." },
-    { "text": "מחכים, מחכים, מסתכלים,\nאיפה הפרח? עוד לא רואים.", "scene": "The two sisters lie on their tummies on the grass with their chins in their hands, staring at the flowerpot, which shows only brown soil. They look patient and a little puzzled." },
-    { "text": "שמש חמה ומים קרים,\nהזרע מתעורר, ששש... מחכים.", "scene": "The flowerpot stands alone on the grass in warm sunlight with a soft rainbow of water drops from the watering can above it. In the background the two sisters sit on a blanket watching it from a little distance, Heleni with a finger on her lips." },
-    { "text": "בוקר אחד: מה זה? תראו!\nעלה ירוק קטן, הנה הוא!", "scene": "Morning light. A tiny bright green sprout with two small leaves has come up from the soil in the flowerpot. Heleni points at it with her mouth wide open in joy; Tohar leans forward on her hands to look, amazed." },
-    { "text": "עוד עלה ועוד עלה,\nהגבעול גדל למעלה, למעלה.", "scene": "The plant in the flowerpot is now taller, a green stem with several leaves and a closed green bud at the top. Heleni stands beside it measuring its height with her flat hand; Tohar sits and reaches one hand up toward the leaves." },
-    { "text": "והנה פרח, צהוב כמו שמש,\nטוהר והלני מוחאות כפיים ממש.", "scene": "A big cheerful yellow flower has opened at the top of the stem in the flowerpot. Both sisters clap their hands and cheer, their faces lit warm yellow by the flower." },
-    { "text": "דבורה קטנה באה לבקר,\nזזזז... שלום לפרח, והיא עפה מהר.", "scene": "A small round friendly bee hovers above the yellow flower. The two sisters sit very still on the grass watching it with wide eyes, Heleni gently holding Tohar's hand." },
-    { "outfit": "night", "sleep": true, "text": "הפרח נסגר, גם הוא הולך לישון,\nלילה טוב, טוהר והלני, והפרח בחלון.", "scene": "Night. The two sisters are fast asleep side by side in a bed, peaceful faces, eyes closed. On the windowsill above them stands the flowerpot with the yellow flower, its petals gently closed for the night, under a soft moon. The room is dim dusty blue with a faint warm glow." }
-  ]
+    {
+      "text": "עציץ קטן ואדמה חומה,\nטוהר והלני שותלות בגינה.",
+      "scene": "A sunny garden corner. An empty terracotta flowerpot and a small pile of brown soil on the grass. Heleni kneels beside the pot holding a small wooden trowel; Tohar sits next to her patting the pot with both hands."
+    },
+    {
+      "text": "הלני חופרת גומה קטנה,\nטוהר נוגעת באדמה, כמה נעימה!",
+      "scene": "The flowerpot is now filled with brown soil. Heleni makes a small hole in the soil with her finger, concentrating. Tohar presses her open hand into a little pile of soil on the grass and looks at her soil-dusted palm with delight."
+    },
+    {
+      "text": "זרע קטן, עגול וחום,\nהולך לישון באדמה היום.",
+      "scene": "Close view. Heleni holds one small round brown seed between two fingers above the little hole in the soil of the flowerpot. Tohar leans in very close, looking at the tiny seed with huge curious eyes."
+    },
+    {
+      "text": "מכסים אותו בשמיכה של חול,\nלילה טוב, זרע, תגדל גדול.",
+      "scene": "The two sisters gently pat the soil flat in the flowerpot with their hands, Heleni with both hands and Tohar with one. Heleni whispers toward the soil with a tender smile."
+    },
+    {
+      "text": "משפך ירוק, טיף טיף טיף,\nמים לזרע, כמה כיף.",
+      "scene": "Heleni holds a small green watering can with both hands and pours a gentle shower of water drops onto the soil in the flowerpot. Tohar claps her hands, a few drops sparkling in the sunlight."
+    },
+    {
+      "text": "מחכים, מחכים, מסתכלים,\nאיפה הפרח? עוד לא רואים.",
+      "scene": "The two sisters lie on their tummies on the grass with their chins in their hands, staring at the flowerpot, which shows only brown soil. They look patient and a little puzzled."
+    },
+    {
+      "text": "שמש חמה ומים קרים,\nהזרע מתעורר, ששש... מחכים.",
+      "scene": "The flowerpot stands alone on the grass in warm sunlight with a soft rainbow of water drops from the watering can above it. In the background the two sisters sit on a blanket watching it from a little distance, Heleni with a finger on her lips."
+    },
+    {
+      "text": "בוקר אחד: מה זה? תראו!\nעלה ירוק קטן, הנה הוא!",
+      "scene": "Morning light. A tiny bright green sprout with two small leaves has come up from the soil in the flowerpot. Heleni points at it with her mouth wide open in joy; Tohar leans forward on her hands to look, amazed."
+    },
+    {
+      "text": "עוד עלה ועוד עלה,\nהגבעול גדל למעלה, למעלה.",
+      "scene": "The plant in the flowerpot is now taller, a green stem with several leaves and a closed green bud at the top. Heleni stands beside it measuring its height with her flat hand; Tohar sits and reaches one hand up toward the leaves."
+    },
+    {
+      "text": "והנה פרח, צהוב כמו שמש,\nטוהר והלני מוחאות כפיים ממש.",
+      "scene": "A big cheerful yellow flower has opened at the top of the stem in the flowerpot. Both sisters clap their hands and cheer, their faces lit warm yellow by the flower."
+    },
+    {
+      "text": "דבורה קטנה באה לבקר,\nזזזז... שלום לפרח, והיא עפה מהר.",
+      "scene": "A small round friendly bee hovers above the yellow flower. The two sisters sit very still on the grass watching it with wide eyes, Heleni gently holding Tohar's hand."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "הפרח נסגר, גם הוא הולך לישון,\nלילה טוב, טוהר והלני, והפרח בחלון.",
+      "scene": "Night. The two sisters are fast asleep side by side in a bed, peaceful faces, eyes closed. On the windowsill above them stands the flowerpot with the yellow flower, its petals gently closed for the night, under a soft moon. The room is dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "mv3roku4"
 }
