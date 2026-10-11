@@ -180,5 +180,19 @@
     "hasArt": true,
     "rev": "muv327xm",
     "sounds": false
+  },
+  {
+    "id": "tohar-vehabuot",
+    "order": 14,
+    "title": "טוהר והבועות",
+    "subtitle": "פּוּף! בועות סבון בגינה",
+    "for": "tohar",
+    "palette": {
+      "from": "#3f6f7a",
+      "to": "#f0c9a6"
+    },
+    "hasArt": true,
+    "rev": "mv3nmuxy",
+    "sounds": false
   }
 ]
