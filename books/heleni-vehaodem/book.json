@@ -1,0 +1,78 @@
+{
+  "order": 13,
+  "title": "הלני והאודם",
+  "subtitle": "אודם אדום אחד והרבה צחוק",
+  "for": "heleni",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#7a3550",
+    "to": "#f2c9b8"
+  },
+  "outfits": {
+    "day": {
+      "heleni": "a soft raspberry-pink dress with a cream cardigan and cream tights."
+    },
+    "night": {
+      "heleni": "cream pajamas with tiny pink bows."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Heleni sits at a low white dressing table with a round mirror in a cozy bedroom, holding a red toy lipstick in one hand and smiling at her reflection, with playful red smudges around her mouth and a round red dot on each cheek like a little clown.",
+  "pages": [
+    {
+      "text": "על השידה, ליד המראה,\nתיק קטן ורוד, מה יש בו? נראה!",
+      "scene": "A cozy bedroom with a low white dressing table and a round mirror. On the table lies a small pink zippered pouch. Heleni stands on tiptoe beside the table reaching for the pouch with a curious, excited face. Her face is clean."
+    },
+    {
+      "text": "הלני פותחת: אוהו, איזה אוצר!\nאודם אדום, עגול ונהדר.",
+      "scene": "Heleni sits on the rug with the open pink pouch in her lap, holding up a red toy lipstick with both hands and looking at it with wide amazed eyes. A soft powder brush and a small round compact lie beside her. Her face is clean."
+    },
+    {
+      "text": "מול המראה, לאט לאט,\nקו אדום על השפה... כמעט.",
+      "scene": "Heleni sits at the low dressing table in front of the round mirror, carefully bringing the red toy lipstick to her lips with great concentration, tongue peeking out. In the mirror we see her reflection. A wobbly red line beside her mouth."
+    },
+    {
+      "text": "אופס! האודם ברח ללחיים,\nשני עיגולים אדומים, אחת ושתיים.",
+      "scene": "Heleni looks into the round mirror in surprise and delight: she has drawn a round red dot on each cheek with the toy lipstick, and red smudges around her mouth. She points at her cheeks, laughing."
+    },
+    {
+      "text": "נקודה על האף, אדומה וקטנה,\nמי זאת במראה? ליצנית מצחיקה!",
+      "scene": "Close view from the waist up. Heleni now also has a small red dot on the tip of her nose, plus the two round red cheek dots, like a sweet little clown. She makes a funny face at her reflection in the round mirror and laughs."
+    },
+    {
+      "text": "מברשת רכה מדגדגת באף,\nאַפְּצִ'י! ענן ורוד באוויר עף.",
+      "scene": "Heleni holds a big soft powder brush near her nose and sneezes; a small soft pink cloud of powder puffs into the air around her. Her eyes are squeezed shut, her pigtails bouncing. The red dots are still on her cheeks and nose."
+    },
+    {
+      "text": "גם הדובי רוצה להתייפות,\nלב אדום על הלחי, ושתי נקודות.",
+      "scene": "Heleni kneels on the rug in front of her honey-brown teddy bear and gently draws a small red heart on the teddy's cheek with the toy lipstick. The teddy already has two small red dots on its other cheek. Heleni still has her red clown dots and looks very focused."
+    },
+    {
+      "text": "שרשרת ארוכה וכובע עם סרט,\nהלני מתחפשת, כמה היא מאושרת.",
+      "scene": "Heleni stands in front of a tall floor mirror wearing a long string of big wooden beads around her neck and a too-big straw hat with a ribbon, hands on her hips, beaming at her reflection. The red dots are still on her cheeks and nose."
+    },
+    {
+      "text": "סיבוב קטן, קידה יפה,\nמחיאות כפיים מהדובי על הספה.",
+      "scene": "Heleni takes a little bow in the middle of the room, one hand holding the big hat on her head, the long beads swinging. On a small sofa behind her sits the teddy bear with the red heart on its cheek, as if it is her audience."
+    },
+    {
+      "text": "מים וסבון, מגבת רכה,\nהפנים נקיות, והלחי ורודה.",
+      "scene": "Heleni stands on a small wooden step stool at a low sink, wiping her face with a soft cream towel; her face is clean again with naturally rosy cheeks, and a few soap bubbles float around. She smiles into the towel."
+    },
+    {
+      "outfit": "night",
+      "text": "האודם חוזר אל התיק לישון,\nגם הלני מפהקת פיהוק ראשון.",
+      "scene": "Evening, warm lamp light. Heleni in her pajamas, with a clean face, puts the red toy lipstick back into the small pink pouch on the dressing table and yawns a big sleepy yawn, one hand over her mouth."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "בלי אודם ובלי צבע, פשוט כמו שהיא,\nהלני הכי יפה. לילה טוב, יפהפייה.",
+      "scene": "Night. Heleni is fast asleep in her bed with a clean, peaceful face, eyes closed, hugging the teddy bear, which still has the small red heart on its cheek. A soft moon in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muv327xm"
+}

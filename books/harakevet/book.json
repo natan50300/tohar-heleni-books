@@ -1,0 +1,349 @@
+{
+  "order": 12,
+  "title": "הרכבת של טוהר והלני",
+  "subtitle": "טוּ-טוּ! רכבת מקרטון",
+  "for": "both",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": false,
+  "hasArt": true,
+  "palette": {
+    "from": "#34496b",
+    "to": "#e5b97c"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft red-and-cream striped top with navy leggings and cream socks.",
+      "heleni": "a navy-blue dungaree dress over a cream striped top, a small red neckerchief and cream socks."
+    },
+    "night": {
+      "tohar": "pale blue pajamas with tiny red trains.",
+      "heleni": "cream pajamas with tiny blue trains."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "In a cozy playroom, the two sisters sit in a toy train made of two big cardboard boxes joined with string, with painted paper wheels and a paper-tube chimney. Heleni sits in the front box wearing a blue conductor's cap and raising one arm; Tohar sits in the back box clapping.",
+  "pages": [
+    {
+      "text": "קופסה גדולה ועוד קופסה,\nמה נבנה מהן? רכבת יפה!",
+      "scene": "Two big empty cardboard boxes stand on the playroom rug. Heleni stands with her hands on one box, looking at it with a big idea on her face; Tohar sits inside the other box, peeking over its edge and smiling."
+    },
+    {
+      "text": "הלני מציירת גלגלים,\nטוהר מדביקה עיגולים.",
+      "scene": "The two boxes are being turned into a train. Heleni kneels and paints a round wheel on the side of a box with a brush; Tohar sits beside the other box, pressing a round paper circle onto its side with both hands."
+    },
+    {
+      "text": "כובע של נהגת על הראש,\nכולם לעלות, אחת, שתיים, שלוש!",
+      "scene": "The finished cardboard train: two boxes joined with string, round wheels, a paper-tube chimney. Heleni stands beside it proudly putting a blue conductor's cap on her head, one arm pointing forward; Tohar already sits in the back box, arms up.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.35,
+          "y": 0.75,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.5,
+          "y": 0.75,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.65,
+          "y": 0.75,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.8,
+          "y": 0.75,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "דובי, ארנב וגם ברווז,\nכל הנוסעים יושבים בלי לזוז.",
+      "scene": "Heleni places a teddy bear, a plush bunny and a plush duck in a row in the back box of the cardboard train next to Tohar, who hugs the duck. All the passengers sit neatly.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.3,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.5,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.7,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.85,
+          "y": 0.78,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "טוּ-טוּ! הרכבת כבר נוסעת,\nצ'וק צ'וק צ'וק, והלני צופרת.",
+      "scene": "Heleni sits in the front box in her conductor's cap, one fist raised as if pulling a whistle cord, cheeks puffed. Tohar and the plush toys ride in the back box. Little soft dashed motion puffs behind the train suggest it is moving across the playroom.",
+      "spots": [
+        {
+          "sound": "trainchug",
+          "x": 0.25,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainchug",
+          "x": 0.45,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainchug",
+          "x": 0.65,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainchug",
+          "x": 0.85,
+          "y": 0.78,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "עוברים ליד הר של כריות,\nומנהרה ארוכה של שמיכות.",
+      "scene": "The cardboard train passes a tall mountain of piled soft cushions and heads into a tunnel made of a blanket draped over two chairs. Heleni in front points at the tunnel; Tohar in the back looks up at the cushion mountain.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.2,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.4,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.6,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.75,
+          "y": 0.8,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "תחנה ראשונה: המטבח!\nכל נוסע מקבל תפוח.",
+      "scene": "The cardboard train has stopped in a cozy kitchen corner beside a low table with a bowl of red apples. Heleni, standing next to the train, hands a small apple to Tohar, who reaches out with both hands from the back box; the plush toys sit beside her.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.25,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.45,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.65,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.8,
+          "y": 0.82,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "תחנה שנייה: הגינה!\nפרח קטן לכל נוסעת קטנה.",
+      "scene": "The cardboard train stands by an open glass door to a sunny garden. Heleni tucks a small daisy behind the teddy bear's ear; Tohar in the back box holds a daisy in her hand and smells it.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.25,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.45,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.65,
+          "y": 0.8,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.85,
+          "y": 0.8,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "אוי, נרדם הדובי בקרון,\nששש... נוסעים לאט, בלי שאון.",
+      "scene": "In the back box the teddy bear has tipped over asleep against Tohar's shoulder. Heleni in the front box turns around with a finger on her lips; Tohar copies her with a finger on her own lips.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.2,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.4,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.6,
+          "y": 0.82,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.8,
+          "y": 0.82,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "תחנה אחרונה: חדר השינה,\nכל הנוסעים יורדים בשורה.",
+      "scene": "Evening light. The cardboard train has arrived beside a bed in the bedroom. Heleni lines up the teddy bear, the bunny and the duck in a row on the rug; Tohar sits at the end of the row like one more little passenger, smiling.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.08,
+          "y": 0.65,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.25,
+          "y": 0.65,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מות, שמיכה, והרכבת חונה,\nגם היא עייפה אחרי הנסיעה.",
+      "scene": "Warm lamp light. The two sisters in their pajamas sit in bed under one blanket, looking down fondly at the cardboard train parked on the rug beside the bed, the conductor's cap resting on its front box.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.15,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.3,
+          "y": 0.78,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.45,
+          "y": 0.78,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "לילה טוב, רכבת. לילה טוב, נוסעים.\nטוהר והלני חולמות חלומות נעימים.",
+      "scene": "Night. The two sisters are fast asleep side by side in the bed, peaceful faces, eyes closed. On the rug beside the bed the cardboard train stands quietly with the three plush toys sleeping inside it. A soft moon in the window, the room dim dusty blue with a faint warm glow.",
+      "spots": [
+        {
+          "sound": "trainwhistle",
+          "x": 0.1,
+          "y": 0.85,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.25,
+          "y": 0.85,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.4,
+          "y": 0.85,
+          "r": 0.2
+        },
+        {
+          "sound": "trainwhistle",
+          "x": 0.5,
+          "y": 0.85,
+          "r": 0.2
+        }
+      ]
+    }
+  ],
+  "rev": "muuz6p0k",
+  "hint": "געו בבנות וברכבת · מנגינה: כפתור ♪ למעלה מימין",
+  "coverSpots": [
+    {
+      "sound": "trainwhistle",
+      "x": 0.25,
+      "y": 0.75,
+      "r": 0.2
+    },
+    {
+      "sound": "trainwhistle",
+      "x": 0.45,
+      "y": 0.75,
+      "r": 0.2
+    },
+    {
+      "sound": "trainwhistle",
+      "x": 0.65,
+      "y": 0.75,
+      "r": 0.2
+    },
+    {
+      "sound": "trainwhistle",
+      "x": 0.8,
+      "y": 0.75,
+      "r": 0.2
+    }
+  ]
+}

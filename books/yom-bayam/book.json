@@ -1,0 +1,208 @@
+{
+  "order": 4,
+  "title": "טוהר והלני בים",
+  "subtitle": "גלים, חול ושחף אחד",
+  "for": "both",
+  "ratio": 2,
+  "hasArt": true,
+  "hint": "געו בבנות, בגלים ובשחף",
+  "palette": {
+    "from": "#2f6f8a",
+    "to": "#e0b77a"
+  },
+  "outfits": {
+    "beach": {
+      "tohar": "a pale-yellow short-sleeved cotton romper with tiny white dots and a white sun hat with a yellow ribbon, barefoot.",
+      "heleni": "a turquoise sleeveless summer dress with small white seashell print and a straw sun hat, barefoot."
+    }
+  },
+  "coverOutfit": "beach",
+  "coverScene": "Tohar and Heleni sit side by side on warm golden sand at the edge of a calm turquoise sea, laughing, a small red bucket and a sandcastle beside them, one white seagull in the sky.",
+  "pages": [
+    {
+      "text": "בוקר של קיץ, שמש חמה,\nטוהר והלני בים, איזו שמחה!",
+      "scene": "A wide sunny beach in the morning. Heleni runs on the sand toward the sea with her arms up; Tohar sits on a striped beach blanket clapping her hands. Calm turquoise sea behind them.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.45,
+          "y": 0.45,
+          "r": 0.22
+        }
+      ]
+    },
+    {
+      "text": "כובע קטן וכובע גדול,\nרגליים יחפות על החול.",
+      "scene": "Close view of the two sisters standing and sitting on the sand in their sun hats, looking down at their bare feet and wiggling their toes in the warm sand. Heleni stands, Tohar sits beside her.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.88,
+          "y": 0.5,
+          "r": 0.2
+        },
+        {
+          "sound": "waves",
+          "x": 0.1,
+          "y": 0.5,
+          "r": 0.18
+        }
+      ]
+    },
+    {
+      "text": "הים הכחול אומר שלום,\nווּש... ווּש... גלים כל היום.",
+      "scene": "The two sisters sit close together on the sand, seen in three-quarter view, looking at gentle waves rolling onto the shore with white foam. Heleni waves hello to the sea.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.75,
+          "y": 0.45,
+          "r": 0.28
+        }
+      ]
+    },
+    {
+      "text": "גל קטן מדגדג ברגליים,\nהלני צוחקת, טוהר מוחאת כפיים.",
+      "scene": "At the very edge of the water, a tiny wave of foam washes over Heleni's bare feet as she stands laughing. Tohar sits on the wet sand just behind the water line, clapping her hands.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.78,
+          "y": 0.55,
+          "r": 0.28
+        }
+      ]
+    },
+    {
+      "text": "ארמון בחול, מגדל ועוד מגדל,\nטוהר שמה צדף קטן מעל.",
+      "scene": "Heleni kneels on the sand building a sandcastle with two towers, a small red bucket and a yellow spade beside her. Tohar sits next to it and carefully places a small seashell on top of a tower.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.5,
+          "y": 0.35,
+          "r": 0.14
+        }
+      ]
+    },
+    {
+      "text": "מי מציץ מתוך החול?\nסרטן קטן, אדום ועגול.",
+      "scene": "A small friendly round red crab peeks out of a little hole in the sand. Heleni crouches and points at it in surprise; Tohar sits and stares at it with wide curious eyes.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.75,
+          "y": 0.4,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "שחף לבן עף בשמיים,\nקִיָאה! קִיָאה! מעל המים.",
+      "scene": "A white seagull with open beak glides low over the sea in a blue sky. The two sisters on the sand look up at it; Heleni points up with one arm, Tohar looks up with her mouth open.",
+      "spots": [
+        {
+          "sound": "gull",
+          "x": 0.8,
+          "y": 0.18,
+          "r": 0.22
+        },
+        {
+          "sound": "waves",
+          "x": 0.8,
+          "y": 0.62,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "דלי אדום מלא במים,\nפְּלַאש! נשפך על הרגליים.",
+      "scene": "Heleni tips a small red bucket and sea water splashes out over her own bare feet and the sand, drops flying. Both sisters laugh, Tohar sitting beside her with her hands up.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.9,
+          "y": 0.5,
+          "r": 0.16
+        }
+      ]
+    },
+    {
+      "text": "אבטיח אדום, מתוק וקר,\nפרוסה להלני, ולטוהר מה שנשאר.",
+      "scene": "The sisters sit on the striped beach blanket under a pastel beach umbrella. Heleni bites a big slice of red watermelon; Tohar holds a small piece with both hands, watermelon juice on her cheeks, very pleased.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.2,
+          "y": 0.48,
+          "r": 0.16
+        },
+        {
+          "sound": "waves",
+          "x": 0.9,
+          "y": 0.48,
+          "r": 0.14
+        }
+      ]
+    },
+    {
+      "text": "השמש יורדת לאט אל הים,\nלהתראות, גלים! להתראות, לכולם!",
+      "scene": "Sunset on the beach, orange and pink sky, the sun low over the sea. The two sisters stand and sit on the sand seen in three-quarter view from behind, waving goodbye to the sea. The sandcastle stands nearby.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.75,
+          "y": 0.5,
+          "r": 0.28
+        }
+      ]
+    },
+    {
+      "text": "במגבת רכה, אחות ליד אחות,\nהעיניים של שתיהן כמעט סגורות.",
+      "scene": "Dusk on the beach. The two sisters sit cuddled together on the blanket, wrapped in one big soft cream towel, sun hats off, heads leaning on each other, eyes almost closed, very sleepy.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.8,
+          "y": 0.5,
+          "r": 0.26
+        }
+      ]
+    },
+    {
+      "sleep": true,
+      "text": "ווּש... ווּש... הים שר שיר שקט,\nלילה טוב, טוהר והלני, לאט לאט.",
+      "scene": "Early night on the quiet beach, first stars and a soft moon over a calm dark-blue sea. The two sisters lie fast asleep side by side on the blanket under the cream towel, peaceful faces, eyes closed. Dim, calm, dusty-blue light with a faint warm glow.",
+      "spots": [
+        {
+          "sound": "waves",
+          "x": 0.78,
+          "y": 0.4,
+          "r": 0.26
+        }
+      ]
+    }
+  ],
+  "coverSpots": [
+    {
+      "sound": "gull",
+      "x": 0.17,
+      "y": 0.12,
+      "r": 0.12
+    },
+    {
+      "sound": "waves",
+      "x": 0.85,
+      "y": 0.42,
+      "r": 0.2
+    },
+    {
+      "sound": "waves",
+      "x": 0.12,
+      "y": 0.42,
+      "r": 0.16
+    }
+  ],
+  "rev": "mutzqd10",
+  "sharp": true
+}
