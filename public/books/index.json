@@ -194,5 +194,19 @@
     "hasArt": true,
     "rev": "mv3nmuxy",
     "sounds": false
+  },
+  {
+    "id": "machboim",
+    "order": 15,
+    "title": "מחבואים",
+    "subtitle": "אחת מתחבאת, אחת מחפשת",
+    "for": "both",
+    "palette": {
+      "from": "#4a5a7a",
+      "to": "#e9c3a8"
+    },
+    "hasArt": true,
+    "rev": "mv3qsadz",
+    "sounds": false
   }
 ]
