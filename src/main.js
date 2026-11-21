@@ -214,9 +214,14 @@ async function openBook(id) {
   let idx = 0; // a book always opens at its cover
   let turning = false;
 
+  // A picture that fails to load (a phone low on memory, a bad copy kept offline) tries the small file, then a fresh download.
+  const retryImg =
+    "if(!this.dataset.retry){this.dataset.retry=1;this.src=this.src.replace('-1600.webp','-800.webp')}else if(this.dataset.retry==1){this.dataset.retry=2;this.src=this.src.split('?')[0]+'?r='+Date.now()}";
   // What fills the whole screen for page i.
   const fill = (i) =>
-    i === last || !book.hasArt ? `<div class="plain${i === last ? ' night' : ''}"></div>` : `<img alt="" draggable="false" src="${pages[i].src}">`;
+    i === last || !book.hasArt
+      ? `<div class="plain${i === last ? ' night' : ''}"></div>`
+      : `<img alt="" draggable="false" src="${pages[i].src}" onerror="${retryImg}">`;
   // One half of page i, cut at the spine.
   const half = (i, side, cls = 'half') => `<div class="${cls} ${side}"><div class="full">${fill(i)}</div></div>`;
 
