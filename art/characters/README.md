@@ -14,3 +14,7 @@ HELENI, the older, about two years old, a toddler who walks and runs. Dark choco
 - **הלני (בת שנתיים):** שיער חום כהה ומתולתל, שתי קוקיות גבוהות עם סרטים בצבע שמנת, תלתלים על המצח. עיניים חומות כהות בצורת שקד, גבות מודגשות, עור שזוף-זיתי, חיוך רחב. עגילי חישוק זהב קטנים. גבוהה מטוהר בערך בראש.
 
 מהרגע שיש דפי דמות מאוירים, לא משתמשים יותר בתמונות האמיתיות.
+
+## אמא
+
+דף הדמות `ima.png` (נוצר ב-ChatGPT מהתמונות של המשתמש, 2026-11-21). בפרומפט: MOM, a young woman with long wavy chestnut-brown hair in a high ponytail, clear round glasses, small gold hoop earrings, a thin gold necklace, warm light skin, slim; casual sporty clothes.

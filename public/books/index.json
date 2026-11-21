@@ -222,5 +222,19 @@
     "hasArt": true,
     "rev": "mv3roku4",
     "sounds": false
+  },
+  {
+    "id": "lagan-baotobus",
+    "order": 17,
+    "title": "לגן באוטובוס",
+    "subtitle": "אמא, טוהר והלני נוסעות בבוקר",
+    "for": "both",
+    "palette": {
+      "from": "#3d5a7a",
+      "to": "#f2c45a"
+    },
+    "hasArt": true,
+    "rev": "mwqt13z0",
+    "sounds": false
   }
 ]
