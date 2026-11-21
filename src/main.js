@@ -312,7 +312,7 @@ async function openBook(id) {
     if (!spots || book.quiet) return false;
     const [x, y] = onPicture(clientX, clientY);
     const ratio = Number(book.ratio) || 1.5;
-    const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * ratio, y - s.y) < s.r);
+    const hit = [...spots].sort((a, b) => a.r - b.r).find((s) => Math.hypot((x - s.x) * ratio, y - s.y) < s.r * 1.4); // a little extra room for small fingers
     if (!hit) return false;
     playAnimal(hit.sound);
     ring(clientX, clientY);
