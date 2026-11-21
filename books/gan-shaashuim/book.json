@@ -1,0 +1,80 @@
+{
+  "order": 7,
+  "title": "טוהר והלני בגן השעשועים",
+  "subtitle": "נדנדה, מגלשה וארגז חול",
+  "for": "both",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#3f6a5a",
+    "to": "#e2c27a"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "lavender cotton overalls over a cream long-sleeved top, soft cream shoes.",
+      "heleni": "a dusty-blue pinafore dress over a cream top, mustard tights, small tan shoes."
+    },
+    "night": {
+      "tohar": "mint-green pajamas with tiny white moons.",
+      "heleni": "soft yellow pajamas with small white stars."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "A small sunny playground with a swing, a slide and a sandbox among green trees. Heleni stands with her arms up, laughing; Tohar sits on the grass beside her clapping her hands.",
+  "pages": [
+    {
+      "text": "בוקר יפה, השמש מאירה,\nטוהר והלני יוצאות לגינה.",
+      "scene": "Morning. Heleni walks along a garden path pulling a low wooden wagon in which Tohar sits; ahead of them is the gate of a small playground with a swing and a slide among green trees."
+    },
+    {
+      "text": "נדנדה, נדנדה, עולה ויורדת,\nהלני עפה, וטוהר צוחקת.",
+      "scene": "Heleni swings high on a wooden swing, legs stretched forward, pigtails flying, laughing. Tohar sits on the grass at a safe distance, looking up at her and laughing."
+    },
+    {
+      "text": "גם לטוהר יש נדנדה קטנה,\nנד נד, נד נד, איזו מתנה.",
+      "scene": "Tohar sits safely in a small baby bucket swing, holding its front bar with both hands, smiling wide. Heleni stands in front of her, gently holding the swing and smiling at her."
+    },
+    {
+      "text": "מגלשה ארוכה, אחת שתיים שלוש,\nהלני מחליקה עם ידיים על הראש.",
+      "scene": "Heleni slides down a low pastel slide with both hands up above her head, mouth open in a happy shout. Tohar sits on the grass near the bottom of the slide, watching."
+    },
+    {
+      "text": "למטה מחכה לה טוהר הקטנה,\nמוחאת כפיים בשמחה גדולה.",
+      "scene": "Heleni has just landed sitting at the bottom of the slide, laughing. Tohar sits right in front of her on the grass, clapping her hands, the two sisters face to face."
+    },
+    {
+      "text": "ארגז של חול, כף ודלי,\nעוגה של חול בשבילך ובשבילי.",
+      "scene": "The two sisters sit in a wooden sandbox. Heleni turns over a small red bucket to make a sand cake; Tohar holds a yellow spade and pats a little sand cake in front of her."
+    },
+    {
+      "text": "ציפור קטנה באה לבקר,\nמנקרת בחול ועפה מהר.",
+      "scene": "A small round brown bird hops on the wooden edge of the sandbox. Both sisters sit very still in the sand and watch it with wide curious eyes; Heleni holds a finger to her lips."
+    },
+    {
+      "text": "על סוס של קפיץ טוהר רוכבת,\nקדימה, אחורה, כמה היא אוהבת!",
+      "scene": "Tohar sits on a small wooden spring rocking horse, holding its handles with both hands, rocking and laughing. Heleni stands beside her with one steadying hand on her back."
+    },
+    {
+      "text": "הלני מושכת עגלה קטנה,\nוטוהר בפנים, נוסעת כמו מלכה.",
+      "scene": "Heleni pulls the low wooden wagon across the playground lawn; Tohar sits inside it like a little queen, one arm raised, a daisy in her hand."
+    },
+    {
+      "text": "השמש שוקעת, הגן כבר שקט,\nהביתה חוזרות לאט לאט.",
+      "scene": "Sunset, orange and pink sky. The empty playground behind them, the swing hanging still. Heleni pulls the wagon with sleepy Tohar along the path toward home, seen in three-quarter view."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מות רכות, שתיים במיטה,\nהלני מספרת על המגלשה.",
+      "scene": "Evening in the bedroom, warm lamp light. The two sisters sit side by side on a bed in their pajamas, under one blanket up to their tummies. Heleni talks with her hands up like a slide, Tohar listens and smiles sleepily."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "הגן כבר ישן, והנדנדה נחה,\nלילה טוב, טוהר והלני, שינה מתוקה.",
+      "scene": "Night. The two sisters are fast asleep side by side in the bed, peaceful faces, eyes closed. Through the window, far away under the moon, the small playground swing is visible. The room is dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muu877hp"
+}

@@ -1,0 +1,146 @@
+{
+  "order": 17,
+  "title": "לגן באוטובוס",
+  "subtitle": "טוּט-טוּט! אמא, טוהר והלני בדרך לגן",
+  "for": "both",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": false,
+  "hasArt": true,
+  "palette": {
+    "from": "#3d5a7a",
+    "to": "#f2c45a"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft mint-green jacket over a cream romper, cream tights and small white shoes.",
+      "heleni": "a navy coat with toggle buttons, a red knitted scarf, mustard tights, red shoes and a small red backpack."
+    },
+    "night": {
+      "tohar": "pale yellow pajamas with tiny blue buses.",
+      "heleni": "lilac pajamas with tiny yellow buses."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "A sunny morning street. Mom holds Tohar on her hip and Heleni's hand; all three stand at a little bus stop, smiling and waving at a friendly round blue bus that is arriving.",
+  "pages": [
+    {
+      "text": "קוקוריקו! השמש כבר כאן,\nאמא לוחשת: קומו, נוסעות לגן!",
+      "scene": "Morning sunlight in the girls' bedroom. Mom sits on the edge of the bed gently waking the two sisters, who stretch and rub their eyes in their pajamas."
+    },
+    {
+      "text": "מעיל כחול וצעיף אדום,\nנעליים, תיק... ויוצאות! איזה יום!",
+      "scene": "In the entrance hall, Mom kneels and zips up Heleni's coat while Tohar, already dressed, sits on a little bench holding one of her own shoes. Heleni's small red backpack hangs by the door."
+    },
+    {
+      "text": "בתחנה מחכות, יד ביד,\nטוּט-טוּט! האוטובוס הכחול מגיע מיד.",
+      "scene": "At a little bus stop with a bench under a tree. Mom holds Tohar on her hip and Heleni's hand. Heleni points down the street, where a friendly round blue bus is coming.",
+      "spots": [
+        {
+          "sound": "bushorn",
+          "x": 0.88,
+          "y": 0.33,
+          "r": 0.16
+        }
+      ]
+    },
+    {
+      "text": "פְּשְׁשְׁשְׁ! הדלת נפתחת לרווחה,\nהנהג מחייך: בוקר טוב, משפחה!",
+      "scene": "The blue bus door is open. Mom climbs the step with Tohar on her hip, Heleni stepping up beside her. The kind bus driver, a smiling man with a grey moustache and a blue cap, waves hello from his seat.",
+      "spots": [
+        {
+          "sound": "bushorn",
+          "x": 0.88,
+          "y": 0.6,
+          "r": 0.22
+        },
+        {
+          "sound": "bushorn",
+          "x": 0.2,
+          "y": 0.3,
+          "r": 0.18
+        }
+      ]
+    },
+    {
+      "text": "טוהר על הברכיים, חמה ומכורבלת,\nוהלני ליד החלון, מצביעה ומספרת.",
+      "scene": "Inside the bus. Mom sits on a seat with Tohar on her lap leaning against her. Heleni kneels on the seat beside them by the window, pointing out and talking excitedly."
+    },
+    {
+      "text": "הַב-הַב! קורא כלבלב מן המדרכה,\nצִיף-צִיף! עונה ציפור, איזו שירה!",
+      "scene": "The view through the round bus window: a little dog walking on the sidewalk, a tall green tree, a small bird sitting on a wire, and a warm yellow sun. Heleni's and Tohar's faces are seen at the edge of the window, looking out.",
+      "spots": [
+        {
+          "sound": "dog",
+          "x": 0.78,
+          "y": 0.67,
+          "r": 0.2
+        },
+        {
+          "sound": "bird",
+          "x": 0.9,
+          "y": 0.22,
+          "r": 0.12
+        }
+      ]
+    },
+    {
+      "text": "רמזור אדום? עוצרים ומחכים.\nרמזור ירוק? טוּט-טוּט! שוב נוסעים.",
+      "scene": "The blue bus waits at a traffic light that glows soft green. Through the front windshield, Heleni stands beside Mom's seat pointing at the light; the driver nods with a smile."
+    },
+    {
+      "text": "הוֹפּ! האוטובוס קופץ על מהמורה,\nכולן צוחקות: עוד פעם! איזו הרפתקה!",
+      "scene": "Inside the bus as it sways gently. Tohar laughs on Mom's lap, Mom hugs her, and Heleni leans in to join the hug, all three laughing together."
+    },
+    {
+      "text": "כפתור אדום, הלני לוחצת,\nדִּינְג! עוצרים! והיא קופצת.",
+      "scene": "Heleni stands on tiptoe pressing a round red stop button on a bus pole, jumping a little with joy, while Mom, holding Tohar, smiles at her."
+    },
+    {
+      "text": "להתראות, נהג! תודה על הנסיעה!\nטוּט-טוּט! עונה האוטובוס, ונוסע הלאה.",
+      "scene": "The three of them stand on the sidewalk and wave goodbye to the blue bus as it drives away; the driver waves from his window. Behind them is a kindergarten gate with a colorful painted fence and flowers.",
+      "spots": [
+        {
+          "sound": "bushorn",
+          "x": 0.91,
+          "y": 0.4,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "בשער הגן חיבוק ענק ונשיקה,\nאמא תחזור בצהריים, מבטיחה, מבטיחה!",
+      "scene": "At the open kindergarten gate, Mom kneels and gives both girls a big warm hug and a kiss. Inside the yard behind them are a small slide and colorful toys."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "בלילה במיטה, עם אוטובוס קטן,\nחולמות: טוּט-טוּט... מחר שוב לגן.",
+      "scene": "Night in the girls' bedroom, soft lamp light. The two sisters are fast asleep side by side in bed, peaceful faces, eyes closed, a small toy blue bus between them. Mom sits beside the bed, gently tucking the blanket, smiling. A soft moon in the window, the room dim dusty blue with a faint warm glow.",
+      "spots": [
+        {
+          "sound": "bushorn",
+          "x": 0.62,
+          "y": 0.8,
+          "r": 0.12
+        }
+      ]
+    }
+  ],
+  "rev": "mwqtord3",
+  "hint": "געו באוטובוס, בכלבלב ובציפור · מנגינה: כפתור ♪ למעלה מימין",
+  "coverSpots": [
+    {
+      "sound": "bushorn",
+      "x": 0.78,
+      "y": 0.35,
+      "r": 0.2
+    },
+    {
+      "sound": "bushorn",
+      "x": 0.9,
+      "y": 0.45,
+      "r": 0.2
+    }
+  ]
+}

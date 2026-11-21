@@ -1,0 +1,80 @@
+{
+  "order": 15,
+  "title": "מחבואים",
+  "subtitle": "אחת מתחבאת, אחת מחפשת",
+  "for": "both",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#4a5a7a",
+    "to": "#e9c3a8"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a dusty-rose romper with a white round collar and cream socks.",
+      "heleni": "a teal-green corduroy pinafore over a cream long-sleeved top, and mustard socks."
+    },
+    "night": {
+      "tohar": "soft grey pajamas with tiny white stars.",
+      "heleni": "rose pajamas with tiny white moons."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "A cozy living room. Heleni stands with both hands over her eyes, counting, smiling. Behind her Tohar peeks out from behind a long cream curtain with a mischievous grin.",
+  "pages": [
+    {
+      "text": "הלני סופרת: אחת, שתיים, שלוש,\nעיניים עצומות, ידיים על הראש.",
+      "scene": "A cozy living room. Heleni stands facing a wall with her eyes shut tight and both hands on top of her head, counting out loud. Behind her on the rug, Tohar sits looking around the room for a place to hide."
+    },
+    {
+      "text": "טוהר זוחלת מהר אל הפינה,\nאיפה תתחבא ילדה קטנה?",
+      "scene": "Tohar crawls quickly across the living room rug toward a corner with a long cream curtain and a big armchair, looking back over her shoulder with an excited smile. Heleni is small in the background, still covering her eyes."
+    },
+    {
+      "text": "מאחורי הווילון? רואים רגליים!\nשתי גרביים קטנות, אחת ושתיים.",
+      "scene": "A long cream curtain by a window. Tohar hides behind it, but her two small feet in cream socks stick out underneath, and the curtain bulges in her shape. Only the curtain and the little feet are seen, no face."
+    },
+    {
+      "text": "הלני מחפשת מתחת לשולחן,\nאין שם טוהר, רק כדור קטן.",
+      "scene": "Heleni kneels on the floor and looks under a low wooden table, lifting the edge of the tablecloth. Under the table there is only a small red ball. She looks puzzled."
+    },
+    {
+      "text": "אולי בתוך הסל הגדול?\nרק דובי שם ישן, עגול עגול.",
+      "scene": "Heleni stands on tiptoe and peeks into a big woven basket. Inside, a round teddy bear lies curled up as if sleeping on a folded blanket. Heleni tilts her head, thinking."
+    },
+    {
+      "text": "ששש... מה זה? מישהי צוחקת!\nהווילון זז, ומישהי מציצה בשקט.",
+      "scene": "Heleni stops in the middle of the room with one hand cupped behind her ear, listening, a knowing smile on her face. Behind her the cream curtain moves, and Tohar's eyes and the top of her head peek out from its edge."
+    },
+    {
+      "text": "מצאתי אותך! קוראת הלני,\nטוהר צוחקת: קוּקוּ, הנה אני!",
+      "scene": "Heleni pulls the cream curtain aside with a big happy shout. Tohar sits behind it laughing with both arms up in the air. The two sisters look at each other, delighted."
+    },
+    {
+      "text": "עכשיו טוהר סופרת: בָּה, בָּה, בָּה,\nוהלני מתחבאת מתחת לשמיכה.",
+      "scene": "Now it is Tohar's turn: she sits on the rug with both small hands over her eyes, peeking a little between her fingers. Behind her Heleni dives under a big soft knitted blanket on the sofa, only her legs still visible."
+    },
+    {
+      "text": "הר של שמיכה, ומתחתיו תנועה,\nטוהר מושכת: מצאתי! איזו הפתעה!",
+      "scene": "On the sofa a big blanket forms a wobbly hill with Heleni hidden under it. Tohar stands holding the sofa and pulls a corner of the blanket; Heleni's laughing face pops out from under it."
+    },
+    {
+      "text": "חיבוק גדול, שתיהן צוחקות,\nהכי כיף להתחבא עם אחות.",
+      "scene": "The two sisters sit on the rug in a big warm hug, cheek to cheek, both laughing with closed eyes, the knitted blanket draped around their shoulders like a cape."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה ומיטה חמה,\nעכשיו מתחבאות מתחת לשמיכה.",
+      "scene": "Evening in the bedroom, warm lamp light. The two sisters in their pajamas lie side by side in a bed, holding the blanket up to their noses so only their smiling eyes and hair show, playing one last hiding game."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "הירח מציץ: מי שם מתחבאת?\nטוהר והלני ישנות, לאט לאט.",
+      "scene": "Night. The two sisters are fast asleep side by side in the bed, peaceful faces, eyes closed. A soft round moon peeks from behind the edge of the curtain in the window, as if playing hide and seek. The room is dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "mv3qsadz"
+}

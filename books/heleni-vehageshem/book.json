@@ -1,0 +1,204 @@
+{
+  "order": 3,
+  "title": "הלני והגשם",
+  "subtitle": "טיף טף, שלוליות וקשת בענן",
+  "for": "heleni",
+  "ratio": 2,
+  "hasArt": true,
+  "palette": {
+    "from": "#3f5673",
+    "to": "#c9a94e"
+  },
+  "outfits": {
+    "home": {
+      "heleni": "a lilac long-sleeved cotton top and matching lilac leggings, cream socks."
+    },
+    "rain": {
+      "heleni": "a bright but soft yellow raincoat with a hood, red rubber boots, lilac leggings, and she carries a small light-blue umbrella with white dots."
+    },
+    "night": {
+      "heleni": "lavender pajamas with tiny white clouds."
+    }
+  },
+  "coverOutfit": "rain",
+  "coverScene": "Heleni stands happily in a gentle rain on a garden path, holding her small umbrella, one red boot lifted over a round puddle. Soft grey-blue sky, wet green garden, a faint rainbow far behind her.",
+  "pages": [
+    {
+      "outfit": "home",
+      "text": "טיף, טיף, טיף על החלון,\nהלני מציצה: גשם ראשון!",
+      "scene": "Inside a cozy living room on a grey rainy morning. Heleni stands on tiptoe at a low window with both hands on the sill, looking out with wide excited eyes at raindrops running down the glass.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.78,
+          "y": 0.3,
+          "r": 0.28
+        }
+      ]
+    },
+    {
+      "text": "מעיל צהוב כמו שמש קטנה,\nהלני לובשת, הנה היא מוכנה!",
+      "scene": "In the entrance hall by the front door, Heleni proudly wears her yellow raincoat with the hood up, arms spread wide to show it, big smile. Coat hooks and a small bench behind her. No umbrella yet, still in socks."
+    },
+    {
+      "text": "מגפיים אדומים, אחת ושתיים,\nהופ! קופצות לה הרגליים.",
+      "scene": "Heleni in the entrance hall, now wearing her red rubber boots, jumping with both feet off the floor, laughing. The front door is slightly open and rain is visible outside."
+    },
+    {
+      "text": "מטרייה קטנה נפתחת: פּוּף!\nבחוץ הכל רטוב ושטוף.",
+      "scene": "Heleni steps out onto the front doorstep and opens her small light-blue dotted umbrella above her head. A wet garden path, shiny leaves and soft rain in front of her.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.52,
+          "y": 0.2,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "טיף טף, טיף טף מעל הראש,\nהלני הולכת בלי לחשוש.",
+      "scene": "Heleni walks along the wet garden path under her umbrella, raindrops bouncing off it in little splashes, looking up at the umbrella with a delighted smile.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.44,
+          "y": 0.2,
+          "r": 0.2
+        },
+        {
+          "sound": "rain",
+          "x": 0.4,
+          "y": 0.88,
+          "r": 0.12
+        }
+      ]
+    },
+    {
+      "text": "הנה שלולית, עגולה וגדולה,\nהלני רואה בה ילדה קטנה.",
+      "scene": "Heleni bends forward over a big round puddle on the path and sees her own reflection in the water, yellow coat and all. She looks curious and amused. The umbrella rests on her shoulder.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.45,
+          "y": 0.88,
+          "r": 0.16
+        },
+        {
+          "sound": "rain",
+          "x": 0.3,
+          "y": 0.15,
+          "r": 0.16
+        }
+      ]
+    },
+    {
+      "text": "פְּלִיץ' פְּלַאץ'! קפיצה גדולה,\nהמים עפים למעלה.",
+      "scene": "Heleni jumps with both red boots into the puddle, water splashing up in big round drops around her, mouth open in a joyful laugh. The umbrella is closed and lies on the grass beside the path.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.36,
+          "y": 0.76,
+          "r": 0.2
+        }
+      ]
+    },
+    {
+      "text": "חילזון קטן על עלה ירוק,\nהלני לוחשת: שלום, מתוק.",
+      "scene": "Heleni crouches down next to a large wet green leaf with a small friendly snail on it. She looks at it closely and gently, whispering, one finger near but not touching."
+    },
+    {
+      "text": "צפרדע קופצת: קְוָה, קְוָה, קְוָה!\nהלני קופצת איתה בשמחה.",
+      "scene": "A small friendly green frog leaps across the wet grass. Heleni hops beside it in the same pose, knees bent, arms out, laughing.",
+      "spots": [
+        {
+          "sound": "frog",
+          "x": 0.71,
+          "y": 0.62,
+          "r": 0.13
+        },
+        {
+          "sound": "rain",
+          "x": 0.36,
+          "y": 0.8,
+          "r": 0.12
+        }
+      ]
+    },
+    {
+      "text": "הלני פותחת יד קטנה,\nטיפה נוחתת, קרירה ונעימה.",
+      "scene": "Close view from the waist up. Heleni holds one small open hand out in the soft rain, hood up, watching a single raindrop land in her palm with quiet wonder.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.68,
+          "y": 0.35,
+          "r": 0.16
+        }
+      ]
+    },
+    {
+      "text": "הגשם נחלש, טיפה ועוד טיפה,\nומי מציצה? השמש היפה.",
+      "scene": "The rain is almost over. Warm sunlight breaks through the grey clouds and lights the wet garden. Heleni pushes her hood back and looks up at the sun, eyes half closed, smiling."
+    },
+    {
+      "text": "תראו בשמיים, איזה צבעים!\nקשת גדולה מעל העצים.",
+      "scene": "A big soft rainbow arches across the sky above the garden trees. Heleni stands on the path pointing up at it with one arm, amazed, hood down, small in the wide landscape."
+    },
+    {
+      "outfit": "home",
+      "text": "הביתה, הלני! המגפיים בצד,\nוהמעיל נתלה לו לבד.",
+      "scene": "Back in the entrance hall. The red boots stand neatly side by side on a mat and the wet yellow raincoat hangs on a low hook, dripping a little. Heleni, in her home clothes, stands beside them looking pleased."
+    },
+    {
+      "outfit": "home",
+      "text": "מגבת רכה ושוקו חם,\nהכי טעים שיש בעולם.",
+      "scene": "Heleni sits on a soft sofa wrapped in a fluffy cream towel around her shoulders, holding a small mug of warm cocoa with both hands, a little cocoa on her upper lip, cozy and happy. A rainy window behind her."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה חמה, שמיכה נעימה,\nבחוץ הגשם שר לה מנגינה.",
+      "scene": "Evening in Heleni's bedroom, warm lamp light. Heleni in her pajamas lies in her small bed under a soft blanket, awake and calm, listening, looking toward the window where gentle rain falls in the dark.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.88,
+          "y": 0.35,
+          "r": 0.22
+        }
+      ]
+    },
+    {
+      "outfit": "night",
+      "text": "טיף... טיף... העיניים נעצמות.\nלילה טוב, הלני, חלומות של קשתות.",
+      "scene": "Heleni fast asleep in her bed, peaceful face, eyes closed, hugging a small plush bunny. Rain drops on the dark window, the lamp is off, the room is dim dusty blue with a faint warm night-light glow.",
+      "spots": [
+        {
+          "sound": "rain",
+          "x": 0.86,
+          "y": 0.3,
+          "r": 0.22
+        }
+      ],
+      "sleep": true
+    }
+  ],
+  "rev": "mutzq56b",
+  "hint": "געו בהלני ובגשם",
+  "coverSpots": [
+    {
+      "sound": "rain",
+      "x": 0.36,
+      "y": 0.2,
+      "r": 0.2
+    },
+    {
+      "sound": "rain",
+      "x": 0.5,
+      "y": 0.88,
+      "r": 0.14
+    }
+  ],
+  "sharp": true
+}

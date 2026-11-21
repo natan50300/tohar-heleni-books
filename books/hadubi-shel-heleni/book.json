@@ -1,0 +1,80 @@
+{
+  "order": 6,
+  "title": "הדובי של הלני",
+  "subtitle": "יום שלם עם החבר הכי רך",
+  "for": "heleni",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#6b4a3a",
+    "to": "#e3b9a0"
+  },
+  "outfits": {
+    "day": {
+      "heleni": "a soft peach long-sleeved tunic with tiny white dots over mustard-yellow leggings, cream socks."
+    },
+    "night": {
+      "heleni": "soft pink pajamas with small red hearts."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Heleni sits on a soft rug in a cozy playroom hugging her teddy bear tightly, cheek to cheek, with a big smile. Warm light, a few wooden blocks and a small bookshelf behind her.",
+  "pages": [
+    {
+      "outfit": "night",
+      "text": "בוקר טוב, דובי, השמש עלתה,\nהלני מחבקת אותו במיטה.",
+      "scene": "Morning in Heleni's bedroom, soft sunlight through the window. Heleni sits up in her small bed, hair a little messy, hugging the teddy bear and smiling at it."
+    },
+    {
+      "text": "דובי יושב ליד השולחן,\nדייסה חמה, הכל מוכן.",
+      "scene": "A small wooden children's table in a bright kitchen corner. The teddy bear sits on a little chair with a napkin around its neck. Heleni sits beside it, holding a spoon over a small bowl of warm porridge and offering a spoonful to the teddy."
+    },
+    {
+      "text": "קובייה על קובייה, מגדל גבוה,\nדובי מסתכל ואומר: או-הו!",
+      "scene": "In the playroom, Heleni stands on tiptoe placing one more wooden block on top of a tall wobbly tower of pastel blocks. The teddy bear sits on the rug next to the tower, facing it."
+    },
+    {
+      "text": "בּוּם! המגדל נפל לרצפה,\nהלני צוחקת: עוד פעם, יפה!",
+      "scene": "The block tower has just tumbled down, pastel wooden blocks scattered on the rug. Heleni sits among them laughing with her arms up, the teddy bear lying on its back beside her with a block on its tummy."
+    },
+    {
+      "text": "קומקום קטן וכוסות שתיים,\nמסיבת תה, מוחאים כפיים.",
+      "scene": "A tea party on a small blanket on the playroom floor: a tiny toy teapot and two toy cups. Heleni kneels and pours pretend tea into the teddy bear's cup; the teddy sits opposite her."
+    },
+    {
+      "text": "יד ביד רוקדים בחדר,\nסיבוב, סיבוב, הכל בסדר.",
+      "scene": "Heleni dances and spins in the middle of the playroom holding the teddy bear by both paws, its legs flying out, her pigtails swinging, laughing."
+    },
+    {
+      "text": "אוי, דובי נפל! קיבל מכה?\nהלני נותנת לו נשיקה.",
+      "scene": "The teddy bear lies on the rug after a fall. Heleni kneels over it with a caring worried face and gives it a gentle kiss on the forehead, one hand on its tummy."
+    },
+    {
+      "text": "ספר גדול עם ציורים,\nהלני מקריאה לדובי סיפורים.",
+      "scene": "Heleni sits in a cozy reading corner on a big floor cushion with a large open picture book on her lap, the teddy bear tucked under her arm. She points at the page, telling the teddy the story. The book pages show only soft colored shapes, no text."
+    },
+    {
+      "text": "דובי עייף, וגם הלני קצת,\nהשמש בחלון כבר שוקעת.",
+      "scene": "Late afternoon, orange sunset light through the playroom window. Heleni sits on the rug leaning against a cushion, rubbing one eye sleepily, the teddy bear resting in her lap."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה עם לבבות,\nדובי מחכה לה בין הכריות.",
+      "scene": "Evening in the bedroom, warm lamp light. Heleni in her pajamas stands by her small bed, reaching toward the teddy bear, which sits waiting between two soft pillows on the bed."
+    },
+    {
+      "outfit": "night",
+      "text": "שמיכה אחת חמה לשניים,\nחיבוק חזק עם שתי ידיים.",
+      "scene": "Heleni lies in her bed under one soft blanket together with the teddy bear, hugging it tightly with both arms, eyes half closed and a small happy smile. Dim warm night-light."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "ששש... הלני ודובי כבר ישנים,\nלילה טוב, חלומות נעימים.",
+      "scene": "Night. Heleni is fast asleep in her bed, peaceful face, eyes closed, the teddy bear tucked under her arm. A soft moon and stars in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muu4wbvv"
+}

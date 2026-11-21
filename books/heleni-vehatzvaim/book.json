@@ -1,0 +1,78 @@
+{
+  "order": 10,
+  "title": "הלני והצבעים",
+  "subtitle": "אדום, צהוב, כחול וירוק",
+  "for": "heleni",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#3d5f7a",
+    "to": "#f0c46a"
+  },
+  "outfits": {
+    "day": {
+      "heleni": "a white long-sleeved top under a soft denim-blue painting smock with a few paint smudges, coral-pink leggings, barefoot."
+    },
+    "night": {
+      "heleni": "pale turquoise pajamas with tiny colorful dots."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Heleni stands in a bright cozy playroom holding a big paintbrush up in one hand, smiling wide, a little dab of yellow paint on her cheek. Beside her a low table with small pots of red, yellow, blue and green paint and a large blank sheet of paper.",
+  "pages": [
+    {
+      "text": "דף לבן וצבעים בשורה,\nהלני מציירת, איזו שמחה!",
+      "scene": "Heleni kneels at a low wooden table with a large blank white sheet of paper and four small pots of paint in a row: red, yellow, blue and green. She dips a big brush into the red pot, excited."
+    },
+    {
+      "text": "אדום, אדום, תפוח עגול,\nהלני מציירת אותו גדול גדול.",
+      "scene": "Heleni paints a big round red apple shape on the paper with her brush, tongue between her lips in concentration. The red paint pot stands next to her hand."
+    },
+    {
+      "text": "צהוב, צהוב, שמש חמה,\nעם קרניים ארוכות, כמה נעימה!",
+      "scene": "Heleni paints a big yellow sun with long rays on a sheet of paper, smiling. The simple red apple painting lies beside it on the table. A dab of yellow on her cheek."
+    },
+    {
+      "text": "כחול, כחול, ים וגלים,\nודג קטן שוחה בין העיגולים.",
+      "scene": "Heleni paints wavy blue lines like sea waves across a sheet of paper, with one small simple fish shape among round bubbles. She holds the brush in her fist, delighted."
+    },
+    {
+      "text": "ירוק, ירוק, דשא ועץ,\nהמכחול קופץ ומתרוצץ.",
+      "scene": "Heleni paints green grass and a simple round green tree on a sheet of paper with quick happy strokes, her arm lifted, little green dots flying from the brush."
+    },
+    {
+      "text": "אופס! כתם כחול על האף,\nוכתם צהוב על היד, איזה כיף!",
+      "scene": "Close view from the waist up. Heleni has a blue paint dot on the tip of her nose and yellow paint on her hand. She looks at her painted hand and laughs, eyes crossed a little toward her nose."
+    },
+    {
+      "text": "יד קטנה טובלת בצבע,\nטַפּ על הדף, אחת, שתיים... שבע!",
+      "scene": "Heleni presses her open paint-covered hand onto a sheet of paper, leaving colorful handprints in red, yellow and blue in a row. She looks proud and amazed."
+    },
+    {
+      "text": "אדום וצהוב ביחד מתערבבים,\nיצא כתום! איזה קסמים.",
+      "scene": "On a small palette plate, red and yellow paint swirl together into bright orange. Heleni stirs them with her brush and stares at the new orange color with a wide open mouth of wonder."
+    },
+    {
+      "text": "הציור מוכן, תולים על הקיר,\nכל החדר צבעוני ומאיר.",
+      "scene": "The playroom wall at child height, with several of her simple paintings hanging on a string with small wooden pegs: the red apple, the yellow sun, the blue waves, the green tree and the handprints. Heleni stands in front of them with her arms spread wide, proud."
+    },
+    {
+      "text": "מים וסבון, ידיים נקיות,\nהצבעים הולכים, נשארות בועות.",
+      "scene": "Heleni stands on a small wooden step stool at a low sink, washing her hands with soap; soft bubbles float up around her and the water in the basin is tinted with gentle swirls of color. She watches a bubble, smiling."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה ושמיכה,\nהציור על הקיר מחייך אליה בשמחה.",
+      "scene": "Evening in Heleni's bedroom, warm lamp light. Heleni in her pajamas lies in her small bed under a soft blanket, looking up sleepily at her yellow sun painting, which hangs on the wall above the bed."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "לילה טוב, אדום. לילה טוב, כחול.\nהלני חולמת חלום צבעוני וגדול.",
+      "scene": "Night. Heleni is fast asleep in her bed, peaceful face, eyes closed, hugging a small plush bunny. Her paintings hang on the wall above her in the dim light. A soft moon in the window, the room dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "muuna7gu"
+}

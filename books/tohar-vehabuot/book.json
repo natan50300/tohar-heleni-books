@@ -1,0 +1,78 @@
+{
+  "order": 14,
+  "title": "טוהר והבועות",
+  "subtitle": "פּוּף! בועות סבון בגינה",
+  "for": "tohar",
+  "ratio": 2,
+  "sharp": true,
+  "quiet": true,
+  "hasArt": true,
+  "palette": {
+    "from": "#3f6f7a",
+    "to": "#f0c9a6"
+  },
+  "outfits": {
+    "day": {
+      "tohar": "a soft coral-peach sundress with a small white collar, barefoot."
+    },
+    "night": {
+      "tohar": "white pajamas with tiny light-blue circles like bubbles."
+    }
+  },
+  "coverOutfit": "day",
+  "coverScene": "Tohar sits on soft green grass in a sunny garden, looking up and laughing, surrounded by many shiny soap bubbles floating in the air. One hand reaches up toward a big bubble.",
+  "pages": [
+    {
+      "text": "בגינה יש צפרדע ירוקה,\nצפרדע של בועות, איזו מתוקה!",
+      "scene": "A sunny garden lawn. On the grass stands a small round green frog-shaped toy bubble machine with a friendly smile. Tohar sits in front of it, pointing at it with a curious, delighted face. No bubbles yet."
+    },
+    {
+      "text": "פּוּף! יוצאת בועה ראשונה,\nעגולה, שקופה, וכל כך קטנה.",
+      "scene": "One single small shiny soap bubble floats out of the green frog toy's mouth. Tohar leans forward and stares at the tiny bubble with huge amazed eyes and an open mouth."
+    },
+    {
+      "text": "ועוד בועה, ועוד אחת,\nהן עפות למעלה לאט לאט.",
+      "scene": "A gentle stream of soap bubbles rises from the frog toy into the blue sky. Tohar sits on the grass tilting her head back to follow them upward, smiling."
+    },
+    {
+      "text": "טוהר מושיטה יד קטנה,\nפּוֹפּ! הבועה נעלמה.",
+      "scene": "Tohar reaches out one small finger and touches a bubble, which bursts into a tiny sparkle of droplets. She blinks in surprise, other bubbles floating around her."
+    },
+    {
+      "text": "בועה נחתה לה על האף,\nטוהר צוחקת: כיף, כיף, כיף!",
+      "scene": "Close view from the waist up. A small soap bubble rests on the tip of Tohar's nose. She looks at it cross-eyed and laughs, her hands lifted in delight."
+    },
+    {
+      "text": "בועה גדולה, בועה ענקית,\nבתוכה קשת קטנה וצבעונית.",
+      "scene": "One very big soap bubble floats right in front of Tohar, shimmering with soft rainbow colors. She holds both hands up toward it in wonder, her face softly seen through the bubble's edge."
+    },
+    {
+      "text": "פרפר לבן רודף אחריהן,\nגם הוא רוצה לגעת בהן.",
+      "scene": "A small white butterfly flutters among the floating soap bubbles above the garden flowers. Tohar sits on the grass and watches the butterfly and the bubbles, pointing up."
+    },
+    {
+      "text": "בועה נחה על עלה ירוק,\nששש... לא לגעת, רק מרחוק.",
+      "scene": "A single soap bubble rests gently on a large green leaf of a garden plant. Tohar crouches on her knees very close, hands held back against her chest, looking at it carefully without touching."
+    },
+    {
+      "text": "טוהר זוחלת בין הבועות,\nהן מסביבה כמו מאה כוכבות.",
+      "scene": "Tohar crawls happily across the lawn through a cloud of many soap bubbles that float all around her at different heights, catching the sunlight like little stars."
+    },
+    {
+      "text": "השמש שוקעת, הבועות ורודות,\nלהתראות, בועות, אתן כל כך יפות.",
+      "scene": "Sunset in the garden, pink and orange sky. The last few soap bubbles glow pink as they drift away. Tohar sits on the grass beside the green frog toy and waves goodbye to them, a little sleepy."
+    },
+    {
+      "outfit": "night",
+      "text": "פיג'מה רכה, ועל הקיר\nאור קטן עגול, כמו בועה, מאיר.",
+      "scene": "Evening in Tohar's bedroom. Tohar in her pajamas sits in her wooden cot, looking at a small round night-light on the wall that glows softly like a bubble. The green frog toy sits on a shelf nearby."
+    },
+    {
+      "outfit": "night",
+      "sleep": true,
+      "text": "טוהר ישנה, ובחלום שלה\nבועות עפות למעלה, למעלה.",
+      "scene": "Night. Tohar is fast asleep in her cot, peaceful face, eyes closed. A few faint, dreamy translucent bubbles float gently above her in the dim room, and a soft moon shines in the window. The room is dim dusty blue with a faint warm glow."
+    }
+  ],
+  "rev": "mv3nmuxy"
+}
