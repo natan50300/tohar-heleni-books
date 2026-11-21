@@ -4,9 +4,9 @@ const BASE = import.meta.env.BASE_URL;
 const MAX_SECONDS = 4;
 // Animals are played a little higher and faster, so they sound small and friendly.
 // Some recordings are quiet; bring them up to the level of the others.
-const LOUDER = { rain: 3.5, waves: 2, lion: 0.6 };
+const LOUDER = { rain: 3.5, waves: 2, lion: 0.6, bushorn: 0.6 };
 // Long recordings: where to start, and how many seconds to play.
-const CLIP = { waves: [5, 7.5], cow: [0, 2.6], duck: [0, 2.6], dog: [0, 2], lion: [0, 2.5], monkey: [0, 2.5], parrot: [0, 2], elephant: [0, 3], penguin: [0, 3.5], zebra: [0, 2.2], trainwhistle: [0, 2], trainchug: [1, 4.5] };
+const CLIP = { waves: [5, 7.5], cow: [0, 2.6], duck: [0, 2.6], dog: [0, 2], lion: [0, 2.5], monkey: [0, 2.5], parrot: [0, 2], elephant: [0, 3], penguin: [0, 3.5], zebra: [0, 2.2], trainwhistle: [0, 2], trainchug: [1, 4.5], bushorn: [0, 1.8], bird: [0, 1.5] };
 const CUTE = { cow: 1, sheep: 1.15, duck: 1, dog: 1, cat: 1.1, rooster: 1.12, hen: 1.12, horse: 1.2, frog: 1.15 }; // some recordings are long; a touch gets one short call
 
 let ctx = null;

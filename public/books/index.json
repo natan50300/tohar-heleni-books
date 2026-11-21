@@ -227,14 +227,14 @@
     "id": "lagan-baotobus",
     "order": 17,
     "title": "לגן באוטובוס",
-    "subtitle": "אמא, טוהר והלני נוסעות בבוקר",
+    "subtitle": "טוּט-טוּט! אמא, טוהר והלני בדרך לגן",
     "for": "both",
     "palette": {
       "from": "#3d5a7a",
       "to": "#f2c45a"
     },
     "hasArt": true,
-    "rev": "mwqt13z0",
-    "sounds": false
+    "rev": "mwqtord3",
+    "sounds": true
   }
 ]
